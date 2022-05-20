@@ -1,0 +1,375 @@
+:root{
+
+    --white1:#f0f2f5;
+    --white2:#ffffff;
+    --green:#36a420;
+
+}
+
+*body{
+    margin: 0;
+    
+
+}
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>     HEADER STARTS    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+/* left portion of header starts */
+
+.header_left img{
+    height:40px;
+}
+.user_avatar{
+    border-radius:50%;
+    width: 45px;
+}
+.header{
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: var(--white2);
+    z-index: 100;
+    box-shadow: 0 5px 8px -9px rgba(0, 0, 0, 0.75);
+
+}
+.header_left{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.header_input{
+    display: flex;
+    align-items: center;
+    background-color:#eff2f5 ;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 999px;
+}
+.header_input input{
+    border: none;
+    background-color: transparent;
+    outline-width: 0 ;
+    margin-left:5px;
+    font-size: 16px;
+}
+/* left portion of header ends */
+
+/* middle portion of the header begins */
+.header_middle{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.header_option .icons{
+     font-size: xx-large;
+     color: gray;
+
+}
+.header_option:hover .icons{
+    color: #2e81f4;
+
+}
+.header_option{
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    cursor: pointer;
+}
+
+.header_option.active .icons{
+    color: #2e81f4;
+
+}
+.header_option.active {
+    border-bottom:4px solid #2e81f4;
+}
+.header_option:hover{
+    background-color: lightgray;
+    border-radius: 10px;
+    align-items: center;
+    padding: 0 30px;
+    border-bottom: none;
+}
+
+/* right side of the header begins */
+.header_info{
+    display: flex;
+    align-items: center;
+    background-color: rgb(241, 237, 237);
+    border-radius:25px;
+}
+.header_info:hover{
+    background-color: lightgray;
+    border-radius:25px;
+}
+.header_info h6{
+    margin-left:5px;
+    margin-right:15px;
+    margin-top:10px;
+    font-weight: bold;
+
+
+}
+.header_right{
+    display: flex;
+    align-items: center;
+
+}
+.header_right .icons{
+    color:gray;
+    margin: 0 10px;
+    cursor: pointer;
+    margin-top:16px; 
+       
+}
+.right_option{
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin:0 5px;
+    cursor: pointer;
+
+}
+/* this class is retrive from inspect and it's because it is blured and doesn't click anywhere
+logout prompt kholna ko lagi use vako ho right side ko 
+
+*/
+.modal-backdrop {
+    z-index: 1;
+}
+/* right side logout prompt starts here */
+#exampleModal {
+    margin-left:35%;
+    margin-top:35px;
+}
+
+#exampleModal .main_div{
+    display: flex;
+
+}
+
+#exampleModal .main_div img{
+    border-radius:50%;
+    height:40px;
+    width: 40px;
+}
+#exampleModal .main_div .div_for_name h6{
+    font-weight: bold;
+    margin-left:5px;
+    
+}
+#exampleModal .main_div .div_for_name  p{
+    font-size: small;
+    margin-left: 5px;
+    margin-top:-8px;
+    color:gray;
+    
+}
+#exampleModal .icons-body{
+    display: flex;
+    align-items: center;
+    padding:2px;
+    
+}
+
+#exampleModal .icons-body:hover{
+    padding: 2px;
+    background-color: rgb(240, 239, 239);
+    border-radius:10px;
+}
+#exampleModal .icons-body h6{
+    font-size: small;
+    font-weight:bold;
+    margin-left:5px;
+    /* margin-top:5px; */
+    width: 100%;
+    
+}
+
+#exampleModal .icons-body .background_for_icons{
+    background-color: rgb(189, 185, 185);
+    border-radius: 50%;  
+    padding:10px ;
+   
+}
+#exampleModal .modal-body small{
+    color:gray;
+}
+
+
+/* right side logout prompt ends here */
+
+/* right side of the header ends */
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    HEADER ENDS   <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> body starts of profile page<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.container{
+    /* background-color: red; */
+}
+.container img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius:10px;
+    margin-top:-5px;
+    
+}
+
+.upper{
+    position:relative;
+    z-index: -1;
+    
+}
+.container .button {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    
+    
+}
+.container .button button{
+    border-radius:10px;
+    padding:10px;
+    cursor: pointer;
+    border:none;
+    font-size: medium;
+    font-weight: bold;
+    
+}
+.container .lower{
+    display: flex;
+}
+.container .lower .images img{
+    border-radius: 50%;
+    margin-left:30px;
+    height:200px;
+    width:200px;
+    border:5px solid white;
+    margin-top: -60px;
+    z-index: 1;
+    
+
+}
+.container .lower .profile_name{
+    margin-left:15px;
+    margin-top:15px;
+    
+}
+.container .lower .profile_name h3{
+    font-weight: bold;
+  
+}
+.container .lower .profile_name h5{
+    color:gray;
+}
+.container .lower .images_of_friends{
+    display: flex;
+    /* margin-top:70px; */
+}
+
+.container .lower .images{
+    
+    position: relative;
+}
+.container .lower .camera_button{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: lightgray;
+    border-radius: 50%;
+    z-index: 2;
+    right: 9px;
+    bottom: 14px;
+}
+.container .lower .camera_button i{
+    align-items: center;
+    justify-content: center;
+    margin-left:10px;
+    margin-top:10px;
+    cursor: pointer;
+}
+
+/* profile update modal starts from here */
+#profilepic {
+    margin-top:10%;
+}
+#profilepic .update_profile{
+    width: 100%;
+}
+
+/* profile update modal ends from here */
+.container .lower .profile_name .buttons{
+  margin-left:400px;
+  cursor: pointer;
+}
+.container .lower .profile_name .buttons .edit_button{
+    background-color: lightgray;
+    /* outline: none; */
+    border: none;
+}
+.container .intro{
+    margin-top:30px;
+    margin-left:20px;
+    box-shadow:0px 5px 7px -7px rgba(0, 0, 0, 0.75) ;
+    background-color:var(--white1);
+    width: 40%;  
+    border-radius: 10px;
+    padding:5px;
+}
+.container .intro button{
+    width: 100%;
+    border: none;
+    background-color: lightgray;
+    margin-top:5px;
+    
+}
+.container .right_intro{
+    margin-top:30px;
+    margin-left:20px;
+    box-shadow:0px 5px 7px -7px rgba(0, 0, 0, 0.75) ;
+    background-color:var(--white1);
+    width: 40%;  
+    border-radius: 10px;
+    padding:5px;
+}
+
+.container .right_intro .images{
+    display: flex;
+}
+.container .right_intro .images button{
+    border-radius: 30px;
+    width: 100%;
+    margin-left:5px;
+    background-color: lightgray;
+    border: none;
+}
+/* message sender starts from here */
+.messageSender_bottom{
+    display: flex;
+    justify-content: space-evenly;
+}
+.messageSender_option{
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    color:gray;
+    margin: 5px;
+}
+.messageSender_option h3{
+    font-size: medium;
+    margin-left:10px;
+    margin-top:10px;
+}
+.messageSender_option:hover{
+    cursor: pointer;
+    background-color: #eff2f4;
+    border-radius:20px;
+}
+/* message sender ends from here */
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> body ends of profile page<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */

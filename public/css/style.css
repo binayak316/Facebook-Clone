@@ -1,0 +1,570 @@
+/* This css is for facebook home page */
+
+
+:root{
+
+    --white1:#f0f2f5;
+    --white2:#ffffff;
+    --green:#36a420;
+
+}
+
+*body{
+    margin: 0;
+    
+
+}
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>     HEADER STARTS    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+/* left portion of header starts */
+
+.header_left img{
+    height:40px;
+}
+.user_avatar{
+    border-radius:50%;
+    width: 45px;
+}
+.header{
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: var(--white2);
+    z-index: 100;
+    box-shadow: 0 5px 8px -9px rgba(0, 0, 0, 0.75);
+
+}
+.header_left{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.header_input{
+    display: flex;
+    align-items: center;
+    background-color:#eff2f5 ;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 999px;
+}
+.header_input input{
+    border: none;
+    background-color: transparent;
+    outline-width: 0 ;
+    margin-left:5px;
+    font-size: 16px;
+}
+/* left portion of header ends */
+
+/* middle portion of the header begins */
+.header_middle{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.header_option .icons{
+     font-size: xx-large;
+     color: gray;
+
+}
+.header_option:hover .icons{
+    color: #2e81f4;
+
+}
+.header_option{
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    cursor: pointer;
+}
+
+.header_option.active .icons{
+    color: #2e81f4;
+
+}
+.header_option.active {
+    border-bottom:4px solid #2e81f4;
+}
+.header_option:hover{
+    background-color: lightgray;
+    border-radius: 10px;
+    align-items: center;
+    padding: 0 30px;
+    border-bottom: none;
+}
+
+/* right side of the header begins */
+.header_info{
+    display: flex;
+    align-items: center;
+    background-color: rgb(241, 237, 237);
+    border-radius:25px;
+}
+.header_info:hover{
+    background-color: lightgray;
+    border-radius:25px;
+}
+.header_info h6{
+    margin-left:5px;
+    margin-right:15px;
+    margin-top:10px;
+    font-weight: bold;
+
+
+}
+.header_right{
+    display: flex;
+    align-items: center;
+
+}
+.header_right .icons{
+    color:gray;
+    margin: 0 10px;
+    cursor: pointer;
+    margin-top:16px; 
+       
+}
+.right_option{
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin:0 5px;
+    cursor: pointer;
+
+}
+/* this class is retrive from inspect and it's because it is blured and doesn't click anywhere
+logout prompt kholna ko lagi use vako ho right side ko 
+
+*/
+.modal-backdrop {
+    z-index: 1;
+}
+/* right side logout prompt starts here */
+#exampleModal {
+    margin-left:35%;
+    margin-top:35px;
+}
+
+#exampleModal .main_div{
+    display: flex;
+
+}
+
+#exampleModal .main_div img{
+    border-radius:50%;
+    height:40px;
+    width: 40px;
+}
+#exampleModal .main_div .div_for_name h6{
+    font-weight: bold;
+    margin-left:5px;
+    
+}
+#exampleModal .main_div .div_for_name  p{
+    font-size: small;
+    margin-left: 5px;
+    margin-top:-8px;
+    color:gray;
+    
+}
+#exampleModal .icons-body{
+    display: flex;
+    align-items: center;
+    padding:2px;
+    
+}
+
+#exampleModal .icons-body:hover{
+    padding: 2px;
+    background-color: rgb(240, 239, 239);
+    border-radius:10px;
+}
+#exampleModal .icons-body h6{
+    font-size: small;
+    font-weight:bold;
+    margin-left:5px;
+    /* margin-top:5px; */
+    width: 100%;
+    
+}
+
+#exampleModal .icons-body .background_for_icons{
+    background-color: rgb(189, 185, 185);
+    border-radius: 50%;  
+    padding:10px ;
+   
+}
+#exampleModal .modal-body small{
+    color:gray;
+}
+
+/* right side logout prompt ends here */
+
+/* right side of the header ends */
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    HEADER ENDS   <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>       BODY PART STARTS    <<<<<<<<<<<<<<<<<<<<<<< */
+/* sidebar starts */
+.sidebarRow{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;  
+}
+
+.sidebarRow:hover{
+    background-color: lightgray;
+    border-radius: 10px;
+}
+.sidebarRow h4{
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: small;
+}
+/* sidebar ends */
+
+/* story begins */
+.story{
+    position: relative;
+    background-repeat:no-repeat ;
+    background-size: cover;
+    width: 120px;
+    height: 200px;
+    box-shadow:0px 5px 17px -7px rgba(0, 0, 0, 0.75) ;
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 100ms ease-in;
+}
+.story:hover{
+    transform: scale(1.07); 
+}
+.story_avatar{
+    margin:10px;
+}
+.story h6{
+    position: absolute;
+    bottom: 5px;
+    color: white;
+    left: 20px;
+    font-size:small;
+
+}
+.storyReel{
+    
+    padding: 10px 0;
+    display: flex;
+}
+.main-body{
+    display: flex;
+}
+body{
+    background-color:#f1f2f5  ;
+    font-family: sans-serif !important;
+
+}
+.feed{
+    flex:1;
+    padding: 30px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sidebarbar{
+    padding: 25px 10px;
+    flex: 0.33;
+}
+
+/* story ends */
+/* message sender starts */
+.messageSender{
+    display: flex;
+    margin: 30px;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow:0px 5px 7px -7px rgba(0, 0, 0, 0.75) ;
+    width: 70%;
+
+}
+.post_modal{
+    padding:10px;
+    border:10px;
+    width: 100%;
+    background-color:#e4e6e9;
+    text-align: left;
+    border-radius: 25px;
+    opacity: 0.8;
+    margin-left:5px;
+}
+
+.post_modal:hover{
+    background-color: lightgray;
+    
+}
+
+/* prompt modal of create post starts */
+#exampleModal_post #exampleModalLabel{
+    margin-left: 40%;
+    
+}
+#exampleModal_post .modal-body1{
+    display:flex;
+}
+
+.modal-body .image_of_profile img{
+    border-radius:50%;
+}
+.modal-body .profile_name h6{
+    font-size: small;
+    font-weight: bold;
+    margin-left:10px;
+}
+.modal-body .profile_name button{
+    background-color:lightgray;
+    margin-top:-15px;
+    width: 78px;
+    padding:0;
+    margin-left:11px;
+    border:none;
+    
+}
+
+.modal-body textarea{
+    border: none;
+    width: 100%;
+    text-decoration: none;
+    outline: none;
+    font-size: 25px;
+}
+.modal-body textarea::placeholder{
+    font-size: 25px;
+}
+.modal-body .inputs{
+    display: flex;
+    border:1px solid lightgray;
+    border-radius: 10px;
+    padding:20px;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+.logosharu {
+    display: flex;
+    
+    
+}
+.logosharu .ok1{
+    cursor: pointer;
+    padding:0  5px;
+}
+
+.modal-body  button{
+    width: 100%;
+    margin-top:20px;
+} 
+
+
+
+
+/* prompt modal of create post  ends*/
+.messageSender_top{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eff2f5;
+    padding: 15px;
+}
+.messageSender_top form{
+    flex:1;
+    display: flex;
+}
+.messageSender_top form input{
+    flex: 1;
+    outline-width:0 ;
+    border: none;
+    padding:15px 20px;
+    margin:0 10px;
+    border-radius: 999px;
+    background-color: #eff2f4;
+}
+
+.messageSender_bottom{
+    display: flex;
+    justify-content: space-evenly;
+}
+.messageSender_option{
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    color:gray;
+    margin: 5px;
+}
+.messageSender_option h3{
+    font-size: medium;
+    margin-left:10px;
+    margin-top:10px;
+}
+.messageSender_option:hover{
+    cursor: pointer;
+    background-color: #eff2f4;
+    border-radius:20px;
+}
+.post{
+    width:70%;
+    margin-top: 15px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow:0px 5px 7px -7px rgba(0, 0, 0, 0.75) ;
+    
+}
+.post_image img{
+    width:100%;
+}
+.post_top{
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 15px;
+}
+.post_avatar{
+    margin-right:10px;
+
+}
+.post_topInfo h5{
+    font-size: medium;
+    font-weight: bold;
+}
+.post_topInfo p{
+    font-size: small;
+    margin-top:-10px;
+    color: gray;
+}
+.post_bottom{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding:15px 25px;
+}
+.post_options{
+    padding-top:10px;
+    border-top:1px solid lightgray;
+    display: flex;
+    justify-content: space-evenly;
+    
+    font-size: medium;
+    color:gray;
+    cursor:pointer;
+    padding:15px;
+}
+.post_option{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    flex: 1;
+}
+.post_option p{
+    margin-left: 10px;
+}
+.post_option:hover{
+    background-color: #eff2f5;
+    border-radius: 10px;
+}
+/* message sender ends */
+
+/* create room starts */
+.create_room{
+    width:70%;
+    margin-top: 15px;
+    padding-top:10px;
+    padding-bottom: 10px;   
+    border-radius: 15px;
+    background-color: white;
+    box-shadow:0px 5px 7px -7px rgba(0, 0, 0, 0.75) ;
+    
+}
+.logos_room{
+    display: flex;
+    padding-left: 20px;
+}
+
+.create_room .yetti_logo{
+    display: flex;
+    align-items: center;
+    margin-top:2px;
+    border:1px solid#dfe9f3;
+    border-radius: 30px;
+    padding-left:10px;
+    padding-right: 10px;
+    background-color: white;
+    height:45px;
+}
+.yetti_logo:hover{
+    background-color: #f2f2f2;
+
+}
+.yetti_logo h6{
+    margin-left:5px;
+    color:blue;
+    font-family: sans-serif;
+    margin-top:5px;
+}
+.inside_images img{
+    border-radius: 50%;
+    margin:0 10px;
+    margin-top:3px;
+    align-items: center;
+    
+}
+
+    
+/* create room ends */
+
+.rightside_post{
+    margin-top:20px;
+}
+.rightside_post h6{
+    
+    color:gray;
+    font-weight: bold;
+}
+
+.rightside_post img{
+    border-radius:50%;
+}
+.wish{
+    display: flex;
+    align-items: center;
+    
+}
+.wish p{
+    padding-left:10px;
+    padding-right: 40px;
+    margin-top:20px ;
+}
+.contact{
+    display: flex;
+    padding-left:10px;
+}
+.contact h5{
+    padding-left:10px;
+    align-items: center;
+    margin-top: 10px;
+    
+    
+}
+
+
+
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>       BODY PART ENDS    <<<<<<<<<<<<<<<<<<<<<<< */
