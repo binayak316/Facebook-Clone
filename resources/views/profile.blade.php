@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="https://static.xx.fbcdn.net/rsrc.php/yb/r/hLRJ1GG_y0J.ico">
     <link rel="stylesheet" href="css/center.css">
     
-    <title style="text-transform: capitalize;">{{auth()->user()->fname}} {{auth()->user()->lname}}| Facebook</title>
+    <title >{{auth()->user()->fname}} {{auth()->user()->lname}} | Facebook</title>
 </head>
 <body>
     <div class="header">
@@ -39,7 +39,7 @@
     
         <div class="header_right">
              <div class="header_info">
-                 <img class="user_avatar" src="images/pp.jpg" alt="profilepicture" <img src="images/pp.jpg" alt=""style="border-radius: 50%; height:45px;width:45px;padding:5px;">
+                 <img class="user_avatar" src="images/profiles/{{ auth()->user()->Image}}" alt="profilepicture" <img src="images/pp.jpg" alt=""style="border-radius: 50%; height:45px;width:45px;padding:5px;">
                  <h6 style="text-transform: capitalize;">{{auth()->user()->fname}} {{auth()->user()->lname}}</h6>
              </div>
              {{-- right sides icons --}}
@@ -69,14 +69,12 @@
     
                               <div class="main_div">
                                   <div class="div_for_image">
-                                    <img src="images/avatar.png" alt="profile_photo">
+                                    <img src="images/profiles/{{ auth()->user()->Image}}" alt="profile_photo">
                                   </div>
                                   <div class="div_for_name">
                                       <h6 style="text-transform: capitalize;">{{auth()->user()->fname}} {{auth()->user()->lname}}</h6>
                                       <p>See your profile</p>
-                                      
                                   </div>
-    
                               </div>
                             </div>
                             <div class="modal-body">
@@ -130,7 +128,7 @@
       </div>
       <div class="lower">
             <div class="images" id="image_id">
-                <img src="images/p.jpg" alt="personalphoto" >
+                <img src="images/profiles/{{ auth()->user()->Image}}" alt="personalphoto" >
                 <div class="camera_button">
                     <i data-visualcompletion="css-img"  data-bs-toggle="modal" data-bs-target="#profilepic"  class="hu5pjgll lzf7d6o1" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yN/r/8DhOAEmbsqD.png&quot;); background-position: 0px -515px; background-size: auto; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>
                 </div>
@@ -138,14 +136,15 @@
                 {{-- modals of profile picture update starts from here --}}
                  
                 <!-- Modal -->
-                <form action="" method="" enctype="multipart/form-data">
+                <form  method="post" action="{{route('profile_posted')}}"  enctype="multipart/form-data">
+                    @csrf
                     <div class="modal fade" id="profilepic" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Update Your Profile</h5>
                                 <label for="profile" class="btn btn-success">Select Image</label>
-                                <input type="file" id="profile" style="display: none;">
+                                <input type="file" name="postImage" id="profile" style="display: none;">
                             </div>
 
                             <div class="modal-body" >
@@ -156,10 +155,7 @@
                             </div>
 
                             <div class="modal-footer">
-                              
-                            {{-- <button type="submit" class="btn btn-primary update_profile">Update Photo</button> --}}
-                                <input class="btn  btn-primary" type="submit" value="Update Profile Picture" >
-                            
+                                <input class="btn  btn-primary" type="submit"  value="Update Profile Picture" >
                             </div>
                         </div>
                         </div>
@@ -203,7 +199,7 @@
         </div>
         <div class="right_intro" style="flex:2;">
             <div class="images">
-                <img src="images/p.jpg" alt="pp" style="border-radius: 50%; height:35px;width:35px;margin-top:5px;">
+                <img src="images/profiles/{{ auth()->user()->Image}}" alt="pp" style="border-radius: 50%; height:35px;width:35px;margin-top:5px;">
                 <button >What's on your mind,{{auth()->user()->fname}}?</button>
             </div>
             <div class="messageSender_bottom" >

@@ -20,7 +20,7 @@ Route::post('/login',[RegisterController::class, 'login'])->name('loginUser');
 Route::get('/logout',[RegisterController::class, 'logout'])->middleware('auth')->name('logout');
 // Route::get('/home',[RegisterController::class,'home'])->name('home');
 
-// Route::get('/profile',[RegisterController::class,'profile'])->middleware('auth')->name('profile');
 Route::get('/profile',[ProfileController::class,'profile'])->middleware('auth')->name('profile');
+Route::post('/profile',[ProfileController::class,'profile_posted'])->middleware('auth')->name('profile_posted');
 
 

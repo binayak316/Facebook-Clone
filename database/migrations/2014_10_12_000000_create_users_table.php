@@ -25,6 +25,8 @@ return new class extends Migration
             $table->integer('year');
 
             $table->string('gender');
+
+            $table->string('Image')->default('Default.jpg');
                     
             $table->rememberToken();
             $table->timestamps();

@@ -34,7 +34,7 @@
 
     <div class="header_right">
          <div class="header_info">
-             <img class="user_avatar" src="images/pp.jpg" alt="profilepicture" <img src="images/pp.jpg" alt=""style="border-radius: 50%; height:45px;width:45px;padding:5px;">
+             <img class="user_avatar" src="images/profiles/{{ auth()->user()->Image}}" alt="profilepicture" <img src="images/pp.jpg" alt=""style="border-radius: 50%; height:45px;width:45px;padding:5px;">
              <h6 style="text-transform: capitalize;"> <a href="{{route('profile')}}" style="color:black;text-decoration:none;">{{ auth()->user()->fname }} {{auth()->user()->lname}}</a> </h6>
              {{-- <h6>ram</h6> --}}
          </div>
@@ -67,7 +67,7 @@
 
                           <div class="main_div">
                               <div class="div_for_image">
-                                <img src="images/avatar.png" alt="profile_photo">
+                                <img src="images/profiles/{{ auth()->user()->Image}}" alt="profile_photo">
                               </div>
                               <div class="div_for_name">
                                   <h6 style="text-transform: capitalize;"> <a href="{{route('profile')}}" style="color:black;text-decoration:none;">{{ auth()->user()->fname }} {{ auth()->user()->lname }}</a></h6>
@@ -129,7 +129,7 @@
     {{-- sidebar starts --}}
     <div class="sidebar" style="position: sticky;">
         <div class="sidebarRow">
-            <img class="user_avatar" src="images/pp.jpg" alt="profilepicture" style="border-radius: 50%; height:45px;width:45px;">
+            <img class="user_avatar" src="images/profiles/{{ auth()->user()->Image}}" alt="profilepicture" style="border-radius: 50%; height:45px;width:45px;">
             <h4 style="text-transform: capitalize;">  <a href="{{route('profile')}}" style="color:black;text-decoration:none;">{{ auth()->user()->fname}} {{ auth()->user()->lname }}</a></h4>
         </div>
         <div class="sidebarRow">
@@ -197,7 +197,7 @@
         {{-- message sender starts --}}
         <div class="messageSender">
             <div class="messageSender_top">
-                <img class="user_avatar " src="images/pp.jpg" alt="first story" style="border-radius: 50%; height:45px;width:45px;">
+                <img class="user_avatar " src="images/profiles/{{ auth()->user()->Image}}" alt="first story" style="border-radius: 50%; height:45px;width:45px;">
               
                     {{-- writing a post  modals starts from here --}}
                     
@@ -217,11 +217,11 @@
                         <div class="modal-body">
                             <div class="modal-body1">
                                 <div class="image_of_profile">
-                                    <img src="images/avatar.png" alt="photo of mine" height="40" width="40">
+                                    <img src="images/profiles/{{ auth()->user()->Image}}" alt="photo of mine" height="40" width="40">
                                 </div>
         
                                 <div class="profile_name">
-                                    <h6>{{auth()->user()->fname}} {{auth()->user()->lname}}</h6>
+                                    <h6 style="text-transform: capitalize;">{{auth()->user()->fname}} {{auth()->user()->lname}}</h6>
                                     <button  class="btn btn-sm " disabled ><i class="fa-solid fa-earth-americas"></i> Public <i class="fa-solid fa-angle-down"></i></button>
                                 </div>
                             </div>
