@@ -217,6 +217,7 @@ logout prompt kholna ko lagi use vako ho right side ko
     display: flex;
     align-items: center;
     padding: 10px;
+    padding-right: 77px;
     cursor: pointer;  
 }
 
@@ -273,7 +274,8 @@ body{
 }
 .feed{
     flex:1;
-    padding: 30px 100px;
+    /* padding: 30px 100px; */
+    padding: 30px 11px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -472,6 +474,7 @@ body{
     flex: 1;
 }
 .post_option p{
+    margin-top:15px;
     margin-left: 10px;
 }
 .post_option:hover{

@@ -37,19 +37,21 @@
                 <div class=" form">
                  <div >
                     @if(session()->has('success'))
-                    <div class="alert alert-success">
+                    <div class="alert  alert-success">
                       <p>{{session('success')}}</p>
                     </div>
                     @endif
                  </div>
-                    <form action="" method="">
-
+                    <form method="POST"  action="{{route('loginUser')}}" >
+                        @csrf
                         <div class="form-group class1">
-                            <input type="text" class="form-control name" placeholder="Email or Phone number" >
+                            <input type="text" class="form-control name" placeholder="Email or Phone number" name='email'>
+                            <span class="text-danger">@error('email'){{$message}} @enderror</span>
                         </div>
 
                         <div class="form-group class2">
-                            <input type="text" class="form-control password" placeholder="Password" >
+                            <input type="password" class="form-control password" placeholder="Password" name="password" >
+                            <span class="text-danger">@error('password'){{$message}} @enderror</span>
                         </div> <br>
                         
                         <button class="btn btn-primary">Log In</button>
@@ -80,7 +82,7 @@
                           </div>
                           <p " id="shortpara">It’s quick and easy.</p>
                          </div><hr >
-                  <form method="post" action="/register">
+                  <form   action="{{route('registerUser')}}" method="POST">
                     @csrf              
                           <div class="modal-body">
                             <div class="body">

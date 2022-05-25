@@ -19,19 +19,15 @@
 
     <div class="header_middle">
         <div class="header_option active">
-            {{-- <span><i class=" icons fa-solid fa-house fa-2xl"></i></span> --}}
             <svg viewBox="0 0 28 28" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 py1f6qlh" fill="currentColor" height="35" width="35"><path d="M17.5 23.979 21.25 23.979C21.386 23.979 21.5 23.864 21.5 23.729L21.5 13.979C21.5 13.427 21.949 12.979 22.5 12.979L24.33 12.979 14.017 4.046 3.672 12.979 5.5 12.979C6.052 12.979 6.5 13.427 6.5 13.979L6.5 23.729C6.5 23.864 6.615 23.979 6.75 23.979L10.5 23.979 10.5 17.729C10.5 17.04 11.061 16.479 11.75 16.479L16.25 16.479C16.939 16.479 17.5 17.04 17.5 17.729L17.5 23.979ZM21.25 25.479 17 25.479C16.448 25.479 16 25.031 16 24.479L16 18.327C16 18.135 15.844 17.979 15.652 17.979L12.348 17.979C12.156 17.979 12 18.135 12 18.327L12 24.479C12 25.031 11.552 25.479 11 25.479L6.75 25.479C5.784 25.479 5 24.695 5 23.729L5 14.479 3.069 14.479C2.567 14.479 2.079 14.215 1.868 13.759 1.63 13.245 1.757 12.658 2.175 12.29L13.001 2.912C13.248 2.675 13.608 2.527 13.989 2.521 14.392 2.527 14.753 2.675 15.027 2.937L25.821 12.286C25.823 12.288 25.824 12.289 25.825 12.29 26.244 12.658 26.371 13.245 26.133 13.759 25.921 14.215 25.434 14.479 24.931 14.479L23 14.479 23 23.729C23 24.695 22.217 25.479 21.25 25.479Z"></path></svg>
         </div>
         <div class="header_option">
-            {{-- <span><i class=" icons fa-solid fa-user-group fa-2xl"></i></span> --}}
             <svg viewBox="0 0 28 28" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 py1f6qlh" fill="currentColor" height="35" width="35"><path d="M10.5 4.5c-2.272 0-2.75 1.768-2.75 3.25C7.75 9.542 8.983 11 10.5 11s2.75-1.458 2.75-3.25c0-1.482-.478-3.25-2.75-3.25zm0 8c-2.344 0-4.25-2.131-4.25-4.75C6.25 4.776 7.839 3 10.5 3s4.25 1.776 4.25 4.75c0 2.619-1.906 4.75-4.25 4.75zm9.5-6c-1.41 0-2.125.841-2.125 2.5 0 1.378.953 2.5 2.125 2.5 1.172 0 2.125-1.122 2.125-2.5 0-1.659-.715-2.5-2.125-2.5zm0 6.5c-1.999 0-3.625-1.794-3.625-4 0-2.467 1.389-4 3.625-4 2.236 0 3.625 1.533 3.625 4 0 2.206-1.626 4-3.625 4zm4.622 8a.887.887 0 00.878-.894c0-2.54-2.043-4.606-4.555-4.606h-1.86c-.643 0-1.265.148-1.844.413a6.226 6.226 0 011.76 4.336V21h5.621zm-7.122.562v-1.313a4.755 4.755 0 00-4.749-4.749H8.25A4.755 4.755 0 003.5 20.249v1.313c0 .518.421.938.937.938h12.125c.517 0 .938-.42.938-.938zM20.945 14C24.285 14 27 16.739 27 20.106a2.388 2.388 0 01-2.378 2.394h-5.81a2.44 2.44 0 01-2.25 1.5H4.437A2.44 2.44 0 012 21.562v-1.313A6.256 6.256 0 018.25 14h4.501a6.2 6.2 0 013.218.902A5.932 5.932 0 0119.084 14h1.861z"></path></svg>
         </div>
         <div class="header_option">
-            {{-- <span><i class=" icons fa-regular fa-tv fa-2xl"></i></span> --}}
             <svg viewBox="0 0 28 28" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 py1f6qlh" fill="currentColor" height="35" width="35"><path d="M17.5 23.75 21.75 23.75C22.164 23.75 22.5 23.414 22.5 23L22.5 14 22.531 14C22.364 13.917 22.206 13.815 22.061 13.694L21.66 13.359C21.567 13.283 21.433 13.283 21.34 13.36L21.176 13.497C20.591 13.983 19.855 14.25 19.095 14.25L18.869 14.25C18.114 14.25 17.382 13.987 16.8 13.506L16.616 13.354C16.523 13.278 16.39 13.278 16.298 13.354L16.113 13.507C15.53 13.987 14.798 14.25 14.044 14.25L13.907 14.25C13.162 14.25 12.439 13.994 11.861 13.525L11.645 13.35C11.552 13.275 11.419 13.276 11.328 13.352L11.155 13.497C10.57 13.984 9.834 14.25 9.074 14.25L8.896 14.25C8.143 14.25 7.414 13.989 6.832 13.511L6.638 13.351C6.545 13.275 6.413 13.275 6.32 13.351L5.849 13.739C5.726 13.84 5.592 13.928 5.452 14L5.5 14 5.5 23C5.5 23.414 5.836 23.75 6.25 23.75L10.5 23.75 10.5 17.5C10.5 16.81 11.06 16.25 11.75 16.25L16.25 16.25C16.94 16.25 17.5 16.81 17.5 17.5L17.5 23.75ZM3.673 8.75 24.327 8.75C24.3 8.66 24.271 8.571 24.238 8.483L23.087 5.355C22.823 4.688 22.178 4.25 21.461 4.25L6.54 4.25C5.822 4.25 5.177 4.688 4.919 5.338L3.762 8.483C3.729 8.571 3.7 8.66 3.673 8.75ZM24.5 10.25 3.5 10.25 3.5 12C3.5 12.414 3.836 12.75 4.25 12.75L4.421 12.75C4.595 12.75 4.763 12.69 4.897 12.58L5.368 12.193C6.013 11.662 6.945 11.662 7.59 12.193L7.784 12.352C8.097 12.609 8.49 12.75 8.896 12.75L9.074 12.75C9.483 12.75 9.88 12.607 10.194 12.345L10.368 12.2C11.01 11.665 11.941 11.659 12.589 12.185L12.805 12.359C13.117 12.612 13.506 12.75 13.907 12.75L14.044 12.75C14.45 12.75 14.844 12.608 15.158 12.35L15.343 12.197C15.989 11.663 16.924 11.663 17.571 12.197L17.755 12.35C18.068 12.608 18.462 12.75 18.869 12.75L19.095 12.75C19.504 12.75 19.901 12.606 20.216 12.344L20.38 12.208C21.028 11.666 21.972 11.666 22.62 12.207L23.022 12.542C23.183 12.676 23.387 12.75 23.598 12.75 24.097 12.75 24.5 12.347 24.5 11.85L24.5 10.25ZM24 14.217 24 23C24 24.243 22.993 25.25 21.75 25.25L6.25 25.25C5.007 25.25 4 24.243 4 23L4 14.236C2.875 14.112 2 13.158 2 12L2 9.951C2 9.272 2.12 8.6 2.354 7.964L3.518 4.802C4.01 3.563 5.207 2.75 6.54 2.75L21.461 2.75C22.793 2.75 23.99 3.563 24.488 4.819L25.646 7.964C25.88 8.6 26 9.272 26 9.951L26 11.85C26 13.039 25.135 14.026 24 14.217ZM16 23.75 16 17.75 12 17.75 12 23.75 16 23.75Z"></path></svg>
         </div>
         <div class="header_option">
-            {{-- <span><i class=" icons fa-thin fa-game-board-simple fa-2xl"></i></span> --}}
             <svg viewBox="0 0 28 28" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 py1f6qlh" fill="currentColor" height="35" width="35"><path d="M23.5 9.5H10.25a.75.75 0 00-.75.75v7c0 .414.336.75.75.75H17v5.5H4.5v-19h19v5zm0 14h-5v-6.25a.75.75 0 00-.75-.75H11V11h12.5v12.5zm1.5.25V4.25C25 3.561 24.439 3 23.75 3H4.25C3.561 3 3 3.561 3 4.25v19.5c0 .689.561 1.25 1.25 1.25h19.5c.689 0 1.25-.561 1.25-1.25z"></path></svg>
         </div>
     </div>
@@ -39,7 +35,8 @@
     <div class="header_right">
          <div class="header_info">
              <img class="user_avatar" src="images/pp.jpg" alt="profilepicture" <img src="images/pp.jpg" alt=""style="border-radius: 50%; height:45px;width:45px;padding:5px;">
-             <h6>Binayak Pokhrel</h6>
+             <h6 style="text-transform: capitalize;"> <a href="{{route('profile')}}" style="color:black;text-decoration:none;">{{ auth()->user()->fname }} {{auth()->user()->lname}}</a> </h6>
+             {{-- <h6>ram</h6> --}}
          </div>
          {{-- right sides icons --}}
         <div class="right_option">
@@ -73,7 +70,7 @@
                                 <img src="images/avatar.png" alt="profile_photo">
                               </div>
                               <div class="div_for_name">
-                                  <h6>Binayak Pokhrel</h6>
+                                  <h6 style="text-transform: capitalize;"> <a href="{{route('profile')}}" style="color:black;text-decoration:none;">{{ auth()->user()->fname }} {{ auth()->user()->lname }}</a></h6>
                                   <p>See your profile</p>
                                   
                               </div>
@@ -105,8 +102,10 @@
                             </div><br>
 
                             <div class="icons-body">
-                                <span class="background_for_icons"> <i class="fa-solid fa-right-from-bracket fa-lg"></i></span>
-                                <h6>Log Out</h6>
+                                <span></span>
+                                    {{-- <a href="/logout "><span class="background_for_icons"> <i class="fa-solid fa-right-from-bracket fa-lg"></i></span> --}}
+                                   <span class="background_for_icons"> <i class="fa-solid fa-right-from-bracket fa-lg"></i></span>
+                                <h6> <a href="/logout " style="text-decoration: none;color:black;'">Log Out</a></h6>
                             </div><br>
                             <small>Privacy  · Terms  · Advertising  · Ad Choices   · Cookies  · More .  Meta © 2022</small>
                         </div>
@@ -131,7 +130,7 @@
     <div class="sidebar" style="position: sticky;">
         <div class="sidebarRow">
             <img class="user_avatar" src="images/pp.jpg" alt="profilepicture" style="border-radius: 50%; height:45px;width:45px;">
-            <h4>Binayak Pokhrel</h4>
+            <h4 style="text-transform: capitalize;">  <a href="{{route('profile')}}" style="color:black;text-decoration:none;">{{ auth()->user()->fname}} {{ auth()->user()->lname }}</a></h4>
         </div>
         <div class="sidebarRow">
             <img class="hu5pjgll bixrwtb6 icons" src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png" style="height:36px;width:36px" alt="">
@@ -165,8 +164,6 @@
         <div class="storyReel">
             {{-- story starts --}}
             <div  style="background-image: url('images/peace.jpg')" class="story create_story" >
-                {{-- <img class="user_avatar story_avatar" src="images/pp.jpg" alt="first story" style="border-radius: 50%;border:4px solid #166ada ;height:40px;width:40px;"> --}}
-                {{-- <h6 style="bottom: 0;color:black ;position:absolute;left:20px;background-color:white;padding:5px;margin-left:-5px;border-radius:5px;">Create Post</h6> --}}
                 <button class="btn btn-sm " style="background-color:white;margin-top:160px;margin-left:15px;">Create story</button>
                 
             </div>
@@ -206,7 +203,7 @@
                     
                    <!-- Button trigger modal -->
                    <button type="button" class="btn post_modal" data-bs-toggle="modal" data-bs-target="#exampleModal_post">
-                   What's on your mind, Binayak?
+                   What's on your mind, {{auth()->user()->fname}}?
                   </button>
                 <!-- Modal -->
                 <!-- Modal -->
@@ -224,12 +221,12 @@
                                 </div>
         
                                 <div class="profile_name">
-                                    <h6>Binayak Pokhrel</h6>
+                                    <h6>{{auth()->user()->fname}} {{auth()->user()->lname}}</h6>
                                     <button  class="btn btn-sm " disabled ><i class="fa-solid fa-earth-americas"></i> Public <i class="fa-solid fa-angle-down"></i></button>
                                 </div>
                             </div>
                             <div class="textarea">
-                               <textarea name="" id="" cols="55" rows="5" placeholder="What's on your mind, Binayak?"></textarea>
+                               <textarea name="" id="" cols="55" rows="5" placeholder="What's on your mind, {{auth()->user()->fname}}?"></textarea>
                             </div>
                             <div class="inputs">
                                 <div class="addYourPost">
@@ -366,6 +363,7 @@
                     <span><i class="fa-regular fa-thumbs-up fa-xl"></i></span>
                     
                     <p>Like</p>
+                    
                 </div> 
                 <div class="post_option">
                     <span><i class="fa-regular fa-message fa-xl"></i></span>

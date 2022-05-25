@@ -46,7 +46,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    
+    // mutator for password hashing
     public function setPasswordAttribute($password)
     {
         $this->attributes['password'] = bcrypt($password);
