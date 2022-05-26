@@ -34,7 +34,7 @@
 
     <div class="header_right">
          <div class="header_info">
-             <img class="user_avatar" src="images/profiles/{{ auth()->user()->Image}}" alt="profilepicture" <img src="images/pp.jpg" alt=""style="border-radius: 50%; height:45px;width:45px;padding:5px;">
+             <img class="user_avatar" src="images/profiles/{{ auth()->user()->Image}}" alt="profilepicture" style="border-radius: 50%; height:45px;width:45px;padding:5px;object-fit:cover;">
              <h6 style="text-transform: capitalize;"> <a href="{{route('profile')}}" style="color:black;text-decoration:none;">{{ auth()->user()->fname }} {{auth()->user()->lname}}</a> </h6>
              {{-- <h6>ram</h6> --}}
          </div>
@@ -67,7 +67,7 @@
 
                           <div class="main_div">
                               <div class="div_for_image">
-                                <img src="images/profiles/{{ auth()->user()->Image}}" alt="profile_photo">
+                                <img src="images/profiles/{{ auth()->user()->Image}}" alt="profile_photo" style="border-radius: 50%; height:45px;width:45px;padding:5px;object-fit:cover;">
                               </div>
                               <div class="div_for_name">
                                   <h6 style="text-transform: capitalize;"> <a href="{{route('profile')}}" style="color:black;text-decoration:none;">{{ auth()->user()->fname }} {{ auth()->user()->lname }}</a></h6>
@@ -129,7 +129,7 @@
     {{-- sidebar starts --}}
     <div class="sidebar" style="position: sticky;">
         <div class="sidebarRow">
-            <img class="user_avatar" src="images/profiles/{{ auth()->user()->Image}}" alt="profilepicture" style="border-radius: 50%; height:45px;width:45px;">
+            <img class="user_avatar" src="images/profiles/{{ auth()->user()->Image}}" alt="profilepicture" style="border-radius: 50%; height:45px;width:45px;object-fit:cover;">
             <h4 style="text-transform: capitalize;">  <a href="{{route('profile')}}" style="color:black;text-decoration:none;">{{ auth()->user()->fname}} {{ auth()->user()->lname }}</a></h4>
         </div>
         <div class="sidebarRow">
@@ -197,7 +197,7 @@
         {{-- message sender starts --}}
         <div class="messageSender">
             <div class="messageSender_top">
-                <img class="user_avatar " src="images/profiles/{{ auth()->user()->Image}}" alt="first story" style="border-radius: 50%; height:45px;width:45px;">
+                <img class="user_avatar " src="images/profiles/{{ auth()->user()->Image}}" alt="first story" style="border-radius: 50%; height:45px;width:45px;object-fit:cover;">
               
                     {{-- writing a post  modals starts from here --}}
                     
@@ -206,60 +206,60 @@
                    What's on your mind, {{auth()->user()->fname}}?
                   </button>
                 <!-- Modal -->
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal_post" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-top:200px;">
-                    <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel" >Create Post</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="modal-body1">
-                                <div class="image_of_profile">
-                                    <img src="images/profiles/{{ auth()->user()->Image}}" alt="photo of mine" height="40" width="40">
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal_post" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-top:200px;">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel" >Create Post</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-        
-                                <div class="profile_name">
-                                    <h6 style="text-transform: capitalize;">{{auth()->user()->fname}} {{auth()->user()->lname}}</h6>
-                                    <button  class="btn btn-sm " disabled ><i class="fa-solid fa-earth-americas"></i> Public <i class="fa-solid fa-angle-down"></i></button>
-                                </div>
-                            </div>
-                            <div class="textarea">
-                               <textarea name="" id="" cols="55" rows="5" placeholder="What's on your mind, {{auth()->user()->fname}}?"></textarea>
-                            </div>
-                            <div class="inputs">
-                                <div class="addYourPost">
-                                    <h6>Add to your post</h6>
-                                </div>
-                                <div class="logosharu">
-                                    <div class="ok1">
-                                        <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -183px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
+                                <div class="modal-body">
+                                    <div class="modal-body1">
+                                        <div class="image_of_profile">
+                                            <img src="images/profiles/{{ auth()->user()->Image}}" alt="photo of mine" height="40" width="40">
+                                        </div>
+                
+                                        <div class="profile_name">
+                                            <h6 style="text-transform: capitalize;">{{auth()->user()->fname}} {{auth()->user()->lname}}</h6>
+                                            <button  class="btn btn-sm " disabled ><i class="fa-solid fa-earth-americas"></i> Public <i class="fa-solid fa-angle-down"></i></button>
+                                        </div>
                                     </div>
-                                    <div class="ok1">
-                                        <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -158px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
+                                    <div class="textarea">
+                                    <textarea name="" id="" cols="55" rows="5" placeholder="What's on your mind, {{auth()->user()->fname}}?"></textarea>
                                     </div>
-                                    <div class="ok1">
-                                        <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -133px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
+                                    <div class="inputs">
+                                        <div class="addYourPost">
+                                            <h6>Add to your post</h6>
+                                        </div>
+                                        <div class="logosharu">
+                                            <div class="ok1">
+                                                <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -183px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
+                                            </div>
+                                            <div class="ok1">
+                                                <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -158px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
+                                            </div>
+                                            <div class="ok1">
+                                                <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -133px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
+                                            </div>
+                                            <div class="ok1">
+                                                <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yE/r/HyeXO0sd7uk.png&quot;); background-position: 0px -225px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
+                                            </div>
+                                            <div class="ok1">
+                                                <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/IUYFS2LyvHB.png&quot;); background-position: 0px -100px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
+                                            </div>
+                                            <div class="ok1">
+                                                <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -108px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="ok1">
-                                        <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yE/r/HyeXO0sd7uk.png&quot;); background-position: 0px -225px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
-                                    </div>
-                                    <div class="ok1">
-                                        <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/IUYFS2LyvHB.png&quot;); background-position: 0px -100px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
-                                    </div>
-                                    <div class="ok1">
-                                        <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -108px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="btn  btn-primary">Post</button>
+                                    <button type="submit" class="btn  btn-primary">Post</button>
 
+                                </div>
+                                
+                            </div>
+                            </div>
                         </div>
-                        
-                    </div>
-                    </div>
-                </div>
 
             </div>
             {{-- writing a post  modals ends from here --}}

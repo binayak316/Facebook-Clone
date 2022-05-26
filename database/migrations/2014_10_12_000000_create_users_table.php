@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('gender');
 
             $table->string('Image')->default('Default.jpg');
+            $table->string('Cover_img')->default('Default.jpg');
                     
             $table->rememberToken();
             $table->timestamps();

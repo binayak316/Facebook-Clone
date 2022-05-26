@@ -120,10 +120,11 @@
     <div class="container" style="width: 60%;">
       <div class="upper">
           <div class="image" id="Cover_Image">
-             {{-- <img src="images/mardi.jpg" alt="coverphoto" > --}}
+             <img src="images/cover/{{auth()->user()->Cover_img}}" alt="coverphoto" >
            </div>
             <div class="cover_button">
                 <button data-bs-toggle="modal" data-bs-target="#coverphoto"><i class="fa-solid fa-camera"></i> Add Cover Photo</button>
+                {{-- this modal is bottom  of this page --}}
             </div>
       </div>
       <div class="lower">
@@ -136,6 +137,7 @@
                 {{-- modals of profile picture update starts from here --}}
                  
                 <!-- Modal -->
+                {{-- <form  method="post" action="{{ route('profile_posted_picture') }}"  enctype="multipart/form-data"> --}}
                 <form  method="post" action="{{route('profile_posted')}}"  enctype="multipart/form-data">
                     @csrf
                     <div class="modal fade" id="profilepic" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -228,6 +230,8 @@
                 {{-- add cover photo starts from here --}}
 
                     <!-- Modal -->
+                <form action="{{route('cover_posted')}}" method="post" enctype="multipart/form-data">
+                    @csrf
                     <div class="modal fade" id="coverphoto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -235,7 +239,7 @@
                                 <div class="modal-body">
                                     <div class="selectphoto">
                                        <label for="select_cover_image"><i data-visualcompletion="css-img" class="hu5pjgll lzf7d6o1" style="background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/3ZaywPy2zLk.png&quot;); background-position: 0px -315px; background-size: 21px 564px; width: 20px; height: 20px; background-repeat: no-repeat; display: inline-block;"></i>&nbsp;Select Photo</label>
-                                        <input type="file" id="select_cover_image">
+                                        <input type="file" name="coverIMG" id="select_cover_image" style="display:none;">
                                         {{-- <input type="file"> --}}
                                     </div> <br>
                                     <div class="uploadphoto">
@@ -247,6 +251,7 @@
                             </div>
                         </div>
                     </div>
+                </form>
                 {{-- add cover photo ends from here --}}
 
                 <script>

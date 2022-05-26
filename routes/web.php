@@ -21,6 +21,14 @@ Route::get('/logout',[RegisterController::class, 'logout'])->middleware('auth')-
 // Route::get('/home',[RegisterController::class,'home'])->name('home');
 
 Route::get('/profile',[ProfileController::class,'profile'])->middleware('auth')->name('profile');
-Route::post('/profile',[ProfileController::class,'profile_posted'])->middleware('auth')->name('profile_posted');
+// profile picture and cover picture add with post method
+Route::post('/profile',[ProfileController::class,'profile_posted'])->name('profile_posted')->middleware('auth');
+Route::post('/cover',[ProfileController::class,'cover_posted'])->name('cover_posted')->middleware('auth');
+
+
+
+// route for the post my post(status/or photos)
+// Route::post('/',[PostController::class, 'adding_a_post'])->middleware('auth')->name('submitPost');
+
 
 
