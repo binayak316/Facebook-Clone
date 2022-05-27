@@ -203,63 +203,76 @@
                     
                    <!-- Button trigger modal -->
                    <button type="button" class="btn post_modal" data-bs-toggle="modal" data-bs-target="#exampleModal_post">
-                   What's on your mind, {{auth()->user()->fname}}?
+                   What's on your mind, {{auth()->user()->fname}}? 
+
+                   
                   </button>
+                  @if(session()->has('prompt'))
+                   <div class=" alert-success" >
+                      <small>{{session('prompt')}}</small> 
+                   </div>
+                   @endif
                 <!-- Modal -->
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal_post" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-top:200px;">
-                            <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel" >Create Post</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="modal-body1">
-                                        <div class="image_of_profile">
-                                            <img src="images/profiles/{{ auth()->user()->Image}}" alt="photo of mine" height="40" width="40">
-                                        </div>
-                
-                                        <div class="profile_name">
-                                            <h6 style="text-transform: capitalize;">{{auth()->user()->fname}} {{auth()->user()->lname}}</h6>
-                                            <button  class="btn btn-sm " disabled ><i class="fa-solid fa-earth-americas"></i> Public <i class="fa-solid fa-angle-down"></i></button>
-                                        </div>
-                                    </div>
-                                    <div class="textarea">
-                                    <textarea name="" id="" cols="55" rows="5" placeholder="What's on your mind, {{auth()->user()->fname}}?"></textarea>
-                                    </div>
-                                    <div class="inputs">
-                                        <div class="addYourPost">
-                                            <h6>Add to your post</h6>
-                                        </div>
-                                        <div class="logosharu">
-                                            <div class="ok1">
-                                                <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -183px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
-                                            </div>
-                                            <div class="ok1">
-                                                <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -158px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
-                                            </div>
-                                            <div class="ok1">
-                                                <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -133px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
-                                            </div>
-                                            <div class="ok1">
-                                                <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yE/r/HyeXO0sd7uk.png&quot;); background-position: 0px -225px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
-                                            </div>
-                                            <div class="ok1">
-                                                <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/IUYFS2LyvHB.png&quot;); background-position: 0px -100px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
-                                            </div>
-                                            <div class="ok1">
-                                                <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -108px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn  btn-primary">Post</button>
+                        <form action="{{route('PostCreate')}}" method="post">
+                            @csrf
 
+                            <div class="modal fade" id="exampleModal_post" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-top:200px;">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel" >Create Post</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="modal-body1">
+                                            <div class="image_of_profile">
+                                                <img src="images/profiles/{{ auth()->user()->Image}}" alt="photo of mine" height="40" width="40">
+                                            </div>
+                    
+                                            <div class="profile_name">
+                                                <h6 style="text-transform: capitalize;">{{auth()->user()->fname}} {{auth()->user()->lname}}</h6>
+                                                <button  class="btn btn-sm " disabled ><i class="fa-solid fa-earth-americas"></i> Public <i class="fa-solid fa-angle-down"></i></button>
+                                            </div>
+                                        </div>
+                                        <div class="textarea">
+                                        <textarea name="TextPost" id="" cols="55" rows="5" placeholder="What's on your mind, {{auth()->user()->fname}}?"></textarea>
+                                        </div>
+                                        <div class="inputs">
+                                            <div class="addYourPost">
+                                                <h6>Add to your post</h6>
+                                            </div>
+                                            <div class="logosharu">
+                                                <div class="ok1">
+                                                    <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -183px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
+                                                </div>
+                                                <div class="ok1">
+                                                    <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -158px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
+                                                </div>
+                                                <div class="ok1">
+                                                    <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -133px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
+                                                </div>
+                                                <div class="ok1">
+                                                    <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yE/r/HyeXO0sd7uk.png&quot;); background-position: 0px -225px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
+                                                </div>
+                                                <div class="ok1">
+                                                    <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/IUYFS2LyvHB.png&quot;); background-position: 0px -100px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
+                                                </div>
+                                                <div class="ok1">
+                                                    <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -108px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn  btn-primary">Post</button>
+                                    </div>
                                 </div>
-                                
+                                </div>
                             </div>
-                            </div>
-                        </div>
+
+                        </form>
+                       
+
+                        
 
             </div>
             {{-- writing a post  modals ends from here --}}
@@ -345,36 +358,39 @@
 
 
         {{-- >>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<< --}}
+        @foreach($posts as $post)
 
-        <div class="post">
-            <div class="post_top">
-                <img class="user_avatar post_avatar " src="images/pp.jpg" alt="post" <img src="images/pp.jpg" alt=""style="border-radius: 50%;border:4px solid #166ada; height:55px;width:55px;">
-                <div class="post_topInfo">
-                    <h5>Binayak Pokhrel</h5>
-                    <p>14 May at 1:04</p>
+            <div class="post">
+                <div class="post_top">
+                    <img class="user_avatar post_avatar " src="images/pp.jpg" alt="post" <img src="images/pp.jpg" alt=""style="border-radius: 50%;border:4px solid #166ada; height:55px;width:55px;">
+                    <div class="post_topInfo">
+                        <h5>{{$post->user->fname}} {{$post->user->lname}}</h5>
+                        <p>14 May at 1:04</p>
+                    </div>
+                </div>
+                <div class="post_bottom">
+                    <p>{{$post->body}}</p>
+                </div>
+                
+                <div class="post_options">
+                    <div class="post_option">
+                        <span><i class="fa-regular fa-thumbs-up fa-xl"></i></span>
+                        
+                        <p>Like</p>
+                        
+                    </div> 
+                    <div class="post_option">
+                        <span><i class="fa-regular fa-message fa-xl"></i></span>
+                        <p>comment</p>
+                    </div> 
+                    <div class="post_option">
+                        <span><i class="fa fa-share-alt fa-xl"></i></span>
+                        <p>Like</p>
+                    </div> 
                 </div>
             </div>
-            <div class="post_bottom">
-                <p>message</p>
-            </div>
-            
-            <div class="post_options">
-                <div class="post_option">
-                    <span><i class="fa-regular fa-thumbs-up fa-xl"></i></span>
-                    
-                    <p>Like</p>
-                    
-                </div> 
-                <div class="post_option">
-                    <span><i class="fa-regular fa-message fa-xl"></i></span>
-                    <p>comment</p>
-                </div> 
-                <div class="post_option">
-                    <span><i class="fa fa-share-alt fa-xl"></i></span>
-                    <p>Like</p>
-                </div> 
-            </div>
-        </div>
+        @endforeach
+        
         {{-- >>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<< --}}
         
         {{-- post ends --}}

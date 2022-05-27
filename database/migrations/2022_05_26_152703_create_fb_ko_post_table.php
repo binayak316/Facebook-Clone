@@ -17,10 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('body');
             // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            // $table->foreign('user_id')->references('id')->on('users');
-            $table->foreignId('user_id')->constrained();
-            
-
+            // $table->foreign('user_id')->references('id')->on('users') ;
+            $table->foreignId('user_id')->constrained('users');
+            $table->string('Img');
             $table->timestamps();
         });
     }

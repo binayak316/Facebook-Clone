@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PostController; 
 use Illuminate\Support\Facades\Auth;
 
 
@@ -28,7 +29,7 @@ Route::post('/cover',[ProfileController::class,'cover_posted'])->name('cover_pos
 
 
 // route for the post my post(status/or photos)
-// Route::post('/',[PostController::class, 'adding_a_post'])->middleware('auth')->name('submitPost');
+Route::post('/',[PostController::class, 'create'])->middleware('auth')->name('PostCreate');
 
 
 
