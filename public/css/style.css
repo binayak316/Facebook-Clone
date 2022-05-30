@@ -9,6 +9,21 @@
 
 }
 
+html::-webkit-scrollbar{
+    width:0.5vw;
+
+}
+html::-webkit-scrollbar-thumb{
+    background-color: rgb(142, 141, 141);
+    border-radius:20px;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: lightgray;
+} 
+/* .container{
+    scroll-snap-type: y proximity;
+}  */
 *body{
     margin: 0;
     
@@ -214,7 +229,12 @@ logout prompt kholna ko lagi use vako ho right side ko
 /* >>>>>>>>>>>>>>>>>>>>>>       BODY PART STARTS    <<<<<<<<<<<<<<<<<<<<<<< */
 /* sidebar starts */
 .sidebar{
+/* sidebar scroll properties starts */
     width: 25%;
+    position: fixed;
+    left:5px;
+    /* sidebar scroll properties ends */
+
 }
 .sidebarRow{
     display: flex;
@@ -284,6 +304,11 @@ body{
     justify-content: center;
     align-items: center;
     width:50%;
+    /* prpopertes for scroll starts */
+    margin-left: 25%;
+    margin-right: 25%;
+   
+    /* prpopertes for scroll ends */
 }
 .sidebarbar{
     padding: 25px 10px;
@@ -537,7 +562,12 @@ body{
 
 .rightside_post{
     margin-top:20px;
+        /* for scroll properties starts */
     width: 25%;
+    right: -5%;
+    position: fixed;
+    
+    /* for scroll properties ends */
 }
 .rightside_post h6{
     

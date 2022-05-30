@@ -32,7 +32,7 @@
         </div>
     </div>
 
-    <div class="header_right">
+    <div class="header_right" >
          <div class="header_info">
              <img class="user_avatar" src="images/profiles/{{ auth()->user()->Image}}" alt="profilepicture" style="border-radius: 50%; height:45px;width:45px;padding:5px;object-fit:cover;">
              <h6 style="text-transform: capitalize;"> <a href="{{route('profile')}}" style="color:black;text-decoration:none;">{{ auth()->user()->fname }} {{auth()->user()->lname}}</a> </h6>
@@ -127,7 +127,7 @@
 @section('page-body')
 <div class="main-body">
     {{-- sidebar starts --}}
-    <div class="sidebar" style="position: sticky;">
+    <div class="sidebar" >
         <div class="sidebarRow">
             <img class="user_avatar" src="images/profiles/{{ auth()->user()->Image}}" alt="profilepicture" style="border-radius: 50%; height:45px;width:45px;object-fit:cover;">
             <h4 style="text-transform: capitalize;">  <a href="{{route('profile')}}" style="color:black;text-decoration:none;">{{ auth()->user()->fname}} {{ auth()->user()->lname }}</a></h4>
@@ -160,7 +160,7 @@
     {{-- sidebar ends --}}
 
     {{-- middle section news feed starts --}}
-    <div class="feed">
+    <div class="feed" style="overflow-y:scroll;">
         <div class="storyReel">
             {{-- story starts --}}
             <div  style="background-image: url('images/peace.jpg')" class="story create_story" >
