@@ -213,6 +213,9 @@ logout prompt kholna ko lagi use vako ho right side ko
 
 /* >>>>>>>>>>>>>>>>>>>>>>       BODY PART STARTS    <<<<<<<<<<<<<<<<<<<<<<< */
 /* sidebar starts */
+.sidebar{
+    width: 25%;
+}
 .sidebarRow{
     display: flex;
     align-items: center;
@@ -280,6 +283,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width:50%;
 }
 .sidebarbar{
     padding: 25px 10px;
@@ -533,6 +537,7 @@ body{
 
 .rightside_post{
     margin-top:20px;
+    width: 25%;
 }
 .rightside_post h6{
     

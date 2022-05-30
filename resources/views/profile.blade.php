@@ -137,7 +137,6 @@
                 {{-- modals of profile picture update starts from here --}}
                  
                 <!-- Modal -->
-                {{-- <form  method="post" action="{{ route('profile_posted_picture') }}"  enctype="multipart/form-data"> --}}
                 <form  method="post" action="{{route('profile_posted')}}"  enctype="multipart/form-data">
                     @csrf
                     <div class="modal fade" id="profilepic" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -254,7 +253,7 @@
                 </form>
                 {{-- add cover photo ends from here --}}
 
-                <script>
+<script>
                     
 // select or preview photo for cover page starts
 
@@ -290,7 +289,7 @@ function previewImages() {
 
 
 // select photo for cover page ends
-                </script>
+</script>
 
 <script src="js/profilepage.js"></script>
  

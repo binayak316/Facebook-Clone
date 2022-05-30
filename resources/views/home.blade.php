@@ -187,10 +187,7 @@
                 <h6>Shyam Kumar</h6>
             </div>
 
-           <div style="background-image: url('images/3.jpg')" class="story"> 
-                <img class="user_avatar story_avatar" src="images/p3.jpg" alt="first story" style="border-radius: 50%;border:4px solid #166ada ;height:40px;width:40px;">
-                <h6>Jiwan Bhattarai</h6>
-            </div>
+           
 
             {{-- story ends --}}
         </div> 
@@ -214,7 +211,7 @@
                    @endif
                 <!-- Modal -->
                         <!-- Modal -->
-                        <form action="{{route('PostCreate')}}" method="post">
+                        <form action="{{route('PostCreate')}}" method="post" enctype="multipart/form-data">
                             @csrf
 
                             <div class="modal fade" id="exampleModal_post" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-top:200px;">
@@ -224,47 +221,55 @@
                                     <h5 class="modal-title" id="exampleModalLabel" >Create Post</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
-                                    <div class="modal-body">
-                                        <div class="modal-body1">
-                                            <div class="image_of_profile">
-                                                <img src="images/profiles/{{ auth()->user()->Image}}" alt="photo of mine" height="40" width="40">
-                                            </div>
-                    
-                                            <div class="profile_name">
-                                                <h6 style="text-transform: capitalize;">{{auth()->user()->fname}} {{auth()->user()->lname}}</h6>
-                                                <button  class="btn btn-sm " disabled ><i class="fa-solid fa-earth-americas"></i> Public <i class="fa-solid fa-angle-down"></i></button>
-                                            </div>
-                                        </div>
-                                        <div class="textarea">
-                                        <textarea name="TextPost" id="" cols="55" rows="5" placeholder="What's on your mind, {{auth()->user()->fname}}?"></textarea>
-                                        </div>
-                                        <div class="inputs">
-                                            <div class="addYourPost">
-                                                <h6>Add to your post</h6>
-                                            </div>
-                                            <div class="logosharu">
-                                                <div class="ok1">
-                                                    <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -183px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
+                                        <div class="modal-body">
+                                            <div class="modal-body1">
+                                                <div class="image_of_profile">
+                                                    <img src="images/profiles/{{ auth()->user()->Image}}" alt="photo of mine" height="40" width="40" style="object-fit: cover;">
                                                 </div>
-                                                <div class="ok1">
-                                                    <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -158px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
-                                                </div>
-                                                <div class="ok1">
-                                                    <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -133px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
-                                                </div>
-                                                <div class="ok1">
-                                                    <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yE/r/HyeXO0sd7uk.png&quot;); background-position: 0px -225px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
-                                                </div>
-                                                <div class="ok1">
-                                                    <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/IUYFS2LyvHB.png&quot;); background-position: 0px -100px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
-                                                </div>
-                                                <div class="ok1">
-                                                    <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -108px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
+                        
+                                                <div class="profile_name">
+                                                    <h6 style="text-transform: capitalize;">{{auth()->user()->fname}} {{auth()->user()->lname}}</h6>
+                                                    <button  class="btn btn-sm " disabled ><i class="fa-solid fa-earth-americas"></i> Public <i class="fa-solid fa-angle-down"></i></button>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <button type="submit" class="btn  btn-primary">Post</button>
-                                    </div>
+                                            <div class="textarea">
+                                            <textarea name="TextPost" id="" cols="55" rows="5" placeholder="What's on your mind, {{auth()->user()->fname}}?"></textarea>
+                                            </div>
+                                            {{-- this area is for photo preview  starts--}}
+                                            <div  id="post_image_preview" style="height:200px;width:200px;margin-bottom: 40px;">
+                                                {{-- <img src="images/post/{{ auth()->user()->Img}}" alt="post preview image" style="height: 100%;width: 100%;margin-left: 13%;"> --}}
+                                            </div>    
+                                              {{-- this area is for photo preview ends --}}
+
+                                            <div class="inputs">
+                                                <div class="addYourPost">
+                                                    <h6>Add to your post</h6>
+                                                </div>
+                                                <div class="logosharu">
+                                                    <div class="ok1">
+                                                                                                              
+                                                        <label for="select_post_preview_image"><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -183px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></label>
+                                                        <input type="file" id="select_post_preview_image" name="inputimage" style="display:none;">
+                                                    </div>
+                                                    <div class="ok1">
+                                                        <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -158px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
+                                                    </div>
+                                                    <div class="ok1">
+                                                        <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -133px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
+                                                    </div>
+                                                    <div class="ok1">
+                                                        <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yE/r/HyeXO0sd7uk.png&quot;); background-position: 0px -225px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
+                                                    </div>
+                                                    <div class="ok1">
+                                                        <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/IUYFS2LyvHB.png&quot;); background-position: 0px -100px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
+                                                    </div>
+                                                    <div class="ok1">
+                                                        <span><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -108px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn  btn-primary">Post</button>
+                                        </div>                                    
                                 </div>
                                 </div>
                             </div>
@@ -309,12 +314,7 @@
                     <img src="images/p2.jpg" alt=""style="border-radius: 50%; height:45px;width:45px;border:4px solid #166ada">
                     <img src="images/p3.jpg" alt=""style="border-radius: 50%; height:45px;width:45px;">
                     <img src="images/flag.jpg" alt=""style="border-radius: 50%; height:45px;width:45px;">
-                    <img src="images/3.jpg" alt=""style="border-radius: 50%; height:45px;width:45px;border:4px solid #166ada">
-                    <img src="images/pp.jpg" alt=""style="border-radius: 50%; height:45px;width:45px;">
-                    <img src="images/p3.jpg" alt=""style="border-radius: 50%; height:45px;width:45px;">
-                    <img src="images/flag.jpg" alt=""style="border-radius: 50%; height:45px;width:45px;border:4px solid #166ada">
-                   
-   
+                      
                 </div>
             </div>
 
@@ -324,19 +324,22 @@
 
 
         {{-- post starts --}}
+        @foreach($posts as $post)
         <div class="post">
             <div class="post_top">
                 <img class="user_avatar post_avatar " src="images/pp.jpg" alt="post" <img src="images/pp.jpg" alt=""style="border-radius: 50%;border:4px solid #166ada; height:55px;width:55px;">
                 <div class="post_topInfo">
-                    <h5>Binayak Pokhrel</h5>
-                    <p>14 May at 1:04</p>
+                    {{-- <h5>Binayak Pokhrel</h5> --}}
+                    <h5>{{$post->user->fname}} {{$post->user->lname}}</h5>
+                    
+                    <p>{{$post->created_at->diffForHumans()}} <svg fill="currentColor" viewBox="0 0 16 16" width="1em" height="1em" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 py1f6qlh cyypbtt7 fwizqjfa" title="Shared with Public"><title>Shared with Public</title><g fill-rule="evenodd" transform="translate(-448 -544)"><g><path d="M109.5 408.5c0 3.23-2.04 5.983-4.903 7.036l.07-.036c1.167-1 1.814-2.967 2-3.834.214-1 .303-1.3-.5-1.96-.31-.253-.677-.196-1.04-.476-.246-.19-.356-.59-.606-.73-.594-.337-1.107.11-1.954.223a2.666 2.666 0 0 1-1.15-.123c-.007 0-.007 0-.013-.004l-.083-.03c-.164-.082-.077-.206.006-.36h-.006c.086-.17.086-.376-.05-.529-.19-.214-.54-.214-.804-.224-.106-.003-.21 0-.313.004l-.003-.004c-.04 0-.084.004-.124.004h-.037c-.323.007-.666-.034-.893-.314-.263-.353-.29-.733.097-1.09.28-.26.863-.8 1.807-.22.603.37 1.166.667 1.666.5.33-.11.48-.303.094-.87a1.128 1.128 0 0 1-.214-.73c.067-.776.687-.84 1.164-1.2.466-.356.68-.943.546-1.457-.106-.413-.51-.873-1.28-1.01a7.49 7.49 0 0 1 6.524 7.434" transform="translate(354 143.5)"></path><path d="M104.107 415.696A7.498 7.498 0 0 1 94.5 408.5a7.48 7.48 0 0 1 3.407-6.283 5.474 5.474 0 0 0-1.653 2.334c-.753 2.217-.217 4.075 2.29 4.075.833 0 1.4.561 1.333 2.375-.013.403.52 1.78 2.45 1.89.7.04 1.184 1.053 1.33 1.74.06.29.127.65.257.97a.174.174 0 0 0 .193.096" transform="translate(354 143.5)"></path><path fill-rule="nonzero" d="M110 408.5a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-1 0a7 7 0 1 0-14 0 7 7 0 0 0 14 0z" transform="translate(354 143.5)"></path></g></g></svg></p>
                 </div>
             </div>
             <div class="post_bottom">
-                <p>message</p>
+                <p>{{$post->body}}</p>
             </div>
             <div class="post_image">
-                <img src="images/p2.jpg" alt="post">
+                <img src="images/post/{{$post->Img}}" alt="">
             </div>
             <div class="post_options">
                 <div class="post_option">
@@ -355,46 +358,7 @@
             </div>
         </div>
 
-
-
-        {{-- >>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<< --}}
-        @foreach($posts as $post)
-
-            <div class="post">
-                <div class="post_top">
-                    <img class="user_avatar post_avatar " src="images/pp.jpg" alt="post" <img src="images/pp.jpg" alt=""style="border-radius: 50%;border:4px solid #166ada; height:55px;width:55px;">
-                    <div class="post_topInfo">
-                        <h5>{{$post->user->fname}} {{$post->user->lname}}</h5>
-                        <p>14 May at 1:04</p>
-                    </div>
-                </div>
-                <div class="post_bottom">
-                    <p>{{$post->body}}</p>
-                </div>
-                
-                <div class="post_options">
-                    <div class="post_option">
-                        <span><i class="fa-regular fa-thumbs-up fa-xl"></i></span>
-                        
-                        <p>Like</p>
-                        
-                    </div> 
-                    <div class="post_option">
-                        <span><i class="fa-regular fa-message fa-xl"></i></span>
-                        <p>comment</p>
-                    </div> 
-                    <div class="post_option">
-                        <span><i class="fa fa-share-alt fa-xl"></i></span>
-                        <p>Like</p>
-                    </div> 
-                </div>
-            </div>
         @endforeach
-        
-        {{-- >>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<< --}}
-        
-        {{-- post ends --}}
-
     </div>
     {{-- middle section news feed ends --}}
 
@@ -412,25 +376,57 @@
               <img src="images/17500.jpg" alt="" height="53" width="50" style="border:4px solid #166ada"><h5>Ram Thapa</h5>
             </div> <br>
             <div class="contact">
-              <img src="images/solo.jpg" alt="" height="53" width="50"><h5>Shyam Thapa</h5>
+                <img src="images/17500.jpg" alt="" height="53" width="50" style="border:4px solid #166ada"><h5>Ram Thapa</h5>
             </div> <br>
             <div class="contact">
-                <img src="images/m2.jpg" alt="" height="53" width="50"><h5>Hari Thapa</h5>
+                <img src="images/17500.jpg" alt="" height="53" width="50" style="border:4px solid #166ada"><h5>Ram Thapa</h5>
             </div> <br>
               <div class="contact">
                 <img src="images/17500.jpg" alt="" height="53" width="50"><h5>Jerry Thapa</h5>
             </div> <br>
             <div class="contact">
-                <img src="images/m2.jpg" alt="" height="53" width="50"><h5>Tom Thapa</h5>
+                <img src="images/17500.jpg" alt="" height="53" width="50" style="border:4px solid #166ada"><h5>Ram Thapa</h5>
             </div> <br>
             <div class="contact">
-                <img src="images/solo.jpg" alt="" height="53" width="50"><h5>Sundar Thapa</h5>
+                <img src="images/17500.jpg" alt="" height="53" width="50" style="border:4px solid #166ada"><h5>Ram Thapa</h5>
             </div> <br>
 
            
        </div>
     </div>
 </div>
+
+
+<script>
+    function previewImages() {
+    var preview = document.querySelector('#post_image_preview');
+    
+    if (this.files) {
+    [].forEach.call(this.files, readAndPreview);
+    }
+    
+    function readAndPreview(file) {
+    
+    // Make sure `file.name` matches our extensions criteria
+    if (!/\.(jpe?g|png|gif)$/i.test(file.name)) {
+    return alert(file.name + " is not an image");
+    } // else...
+    
+    var reader = new FileReader();
+    
+    reader.addEventListener("load", function() {
+    var image = new Image();
+    image.height = 100;
+    image.title  = file.name;
+    image.src    = this.result;
+    preview.appendChild(image);
+    });
+    
+    reader.readAsDataURL(file);
+    }
+    }
+    document.querySelector('#select_post_preview_image').addEventListener("change", previewImages);
+</script>
 
     
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>

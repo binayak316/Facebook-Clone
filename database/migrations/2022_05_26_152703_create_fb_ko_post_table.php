@@ -15,12 +15,13 @@ return new class extends Migration
     {
         Schema::create('fb_ko_post', function (Blueprint $table) {
             $table->id();
-            $table->string('body');
+            $table->string('body')->nullable();
             // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             // $table->foreign('user_id')->references('id')->on('users') ;
-            $table->foreignId('user_id')->constrained('users');
-            $table->string('Img');
+            $table->foreignId('user_id')->constrained('users') ;
+            $table->string('Img')->nullable();
             $table->timestamps();
+            
         });
     }
 
