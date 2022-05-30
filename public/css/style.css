@@ -486,7 +486,7 @@ body{
 }
 .post_options{
     padding-top:10px;
-    border-top:1px solid lightgray;
+    /* border-top:1px solid lightgray; */
     display: flex;
     justify-content: space-evenly;
     
@@ -555,6 +555,26 @@ body{
     margin-top:3px;
     align-items: center;
     
+}
+.like_share_comment{
+    margin-bottom: -29px;
+    margin-top: 10px;
+}
+
+.reacts{
+    margin-left:10px;
+    
+}
+.reacts .img2{
+    margin-left:-10px;    
+}
+.reacts .img3{
+    margin-left:-10px;  
+}
+.post_hr{
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom:-10px;
 }
 
     
