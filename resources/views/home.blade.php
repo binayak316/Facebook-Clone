@@ -159,54 +159,74 @@
             <h4>See more</h4>
         </div>
     </div>
+    
     {{-- sidebar ends --}}
 
     {{-- middle section news feed starts --}}
     <div class="feed" style="overflow-y:scroll;">
+
+        
+
+
+
+
+
+
         <div class="storyReel">
-            {{-- story starts --}}
-
-
-            <div id="creatingstory" class="story" style="background-image:url('images/peace.jpg');">
+            
+            <div id="creatingstory" class="create_my_story" style="background-image:url('images/peace.jpg');">
                 <svg fill="currentColor" viewBox="0 0 20 20" width="2em" height="2em" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 ljqsnud1 jnigpg78 odw8uiq3"><g fill-rule="evenodd" transform="translate(-446 -350)"><g fill-rule="nonzero"><path d="M95 201.5h13a1 1 0 1 0 0-2H95a1 1 0 1 0 0 2z" transform="translate(354.5 159.5)"></path><path d="M102.5 207v-13a1 1 0 1 0-2 0v13a1 1 0 1 0 2 0z" transform="translate(354.5 159.5)"></path></g></g></svg>  
-                <p>create story</p>                
-                
-            </div>            
-            <div style="background-image: url('images/mardi.jpg')" class="story">
-                <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%;border:4px solid #166ada ;height:40px;width:40px;">
-                <h6>Bibek thapa</h6>
-            </div>
+                <p>create story</p>                 
+            </div>   
+            
+            
+            <div class="Right_subsection">
 
-            <div style="background-image: url('images/flag.jpg')" class="story">
-                <img class="user_avatar story_avatar" src="images/p3.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;" >
-                <h6>Bibek Thapa</h6>
+                <div class="second_right_subsection">
+                            {{-- story starts --}}
+                        <div style="background-image: url('images/mardi.jpg')" class="story">
+                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%;border:4px solid #166ada ;height:40px;width:40px;">
+                            <h6>Bibek thapa</h6>
+                        </div>
+                        <div style="background-image: url('images/flag.jpg')" class="story">
+                            <img class="user_avatar story_avatar" src="images/p3.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;" >
+                            <h6>Bibek Thapa</h6>
+                        </div>
+                        <div style="background-image: url('images/peace.jpg')" class="story">
+                            <img class="user_avatar story_avatar" src="images/pp.jpg" alt="first story" style="border-radius: 50%;border:4px solid #166ada ;height:40px;width:40px;">
+                            <h6>Ram Thapa</h6>
+                        </div>
+                        <div style="background-image: url('images/mardi.jpg')" class="story">
+                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
+                            <h6>Shyam Kumar</h6>
+                        </div>
+                        
+                        
+                        {{-- story ends --}}
+                </div>
+               
             </div>
-            <div style="background-image: url('images/peace.jpg')" class="story">
-                <img class="user_avatar story_avatar" src="images/pp.jpg" alt="first story" style="border-radius: 50%;border:4px solid #166ada ;height:40px;width:40px;">
-                <h6>Ram Thapa</h6>
-            </div>
-
-            <div style="background-image: url('images/mardi.jpg')" class="story">
-                <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
-                <h6>Shyam Kumar</h6>
-            </div>
-
-           
-
-            {{-- story ends --}}
+            
         </div> 
+
+
+
+
+
+
+
+
+
+
+
         {{-- message sender starts --}}
         <div class="messageSender">
             <div class="messageSender_top">
                 <img class="user_avatar " src="images/profiles/{{ auth()->user()->Image}}" alt="first story" style="border-radius: 50%; height:45px;width:45px;object-fit:cover;">
-              
                     {{-- writing a post  modals starts from here --}}
-                    
                    <!-- Button trigger modal -->
                    <button type="button" class="btn post_modal" data-bs-toggle="modal" data-bs-target="#exampleModal_post">
-                   What's on your mind, {{auth()->user()->fname}}? 
-
-                   
+                   What's on your mind, {{auth()->user()->fname}}?                    
                   </button>
                   @if(session()->has('prompt'))
                    <div class=" alert-success" >
@@ -244,14 +264,12 @@
                                                 {{-- <img src="images/post/{{ auth()->user()->Img}}" alt="post preview image" style="height: 100%;width: 100%;margin-left: 13%;"> --}}
                                             </div>    
                                               {{-- this area is for photo preview ends --}}
-
                                             <div class="inputs">
                                                 <div class="addYourPost">
                                                     <h6>Add to your post</h6>
                                                 </div>
                                                 <div class="logosharu">
-                                                    <div class="ok1">
-                                                                                                              
+                                                    <div class="ok1">                                                       
                                                         <label for="select_post_preview_image"><i data-visualcompletion="css-img" class="hu5pjgll bixrwtb6" style="height: 24px; width: 24px; background-image: url(&quot;https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/gFS7G2Hd9KE.png&quot;); background-position: 0px -183px; background-size: auto; background-repeat: no-repeat; display: inline-block;"></i></label>
                                                         <input type="file" id="select_post_preview_image" name="inputimage" style="display:none;">
                                                     </div>
@@ -279,15 +297,10 @@
                             </div>
 
                         </form>
-                       
-
-                        
-
             </div>
             {{-- writing a post  modals ends from here --}}
             <div class="messageSender_bottom">
                 <div class="messageSender_option">
-                    
                     <svg  style="color:red;" fill="currentColor" viewBox="0 0 24 24" width="20" height="20" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 fxtw5amg rgmg9uty b73ngqbp"><g fill-rule="evenodd" transform="translate(-444 -156)"><g><path d="M113.029 2.514c-.363-.088-.746.014-1.048.234l-2.57 1.88a.999.999 0 0 0-.411.807v8.13a1 1 0 0 0 .41.808l2.602 1.901c.219.16.477.242.737.242.253 0 .508-.077.732-.235.34-.239.519-.65.519-1.065V3.735a1.25 1.25 0 0 0-.971-1.22m-20.15 6.563c.1-.146 2.475-3.578 5.87-3.578 3.396 0 5.771 3.432 5.87 3.578a.749.749 0 0 1 0 .844c-.099.146-2.474 3.578-5.87 3.578-3.395 0-5.77-3.432-5.87-3.578a.749.749 0 0 1 0-.844zM103.75 19a3.754 3.754 0 0 0 3.75-3.75V3.75A3.754 3.754 0 0 0 103.75 0h-10A3.754 3.754 0 0 0 90 3.75v11.5A3.754 3.754 0 0 0 93.75 19h10z" transform="translate(354 158.5)"></path><path d="M98.75 12c1.379 0 2.5-1.121 2.5-2.5S100.129 7 98.75 7a2.503 2.503 0 0 0-2.5 2.5c0 1.379 1.121 2.5 2.5 2.5" transform="translate(354 158.5)"></path></g></g></svg>
                     <h3>Live video</h3>
                 </div>
@@ -302,8 +315,6 @@
             </div>
         </div>
         {{-- message sender ends --}}
-
-
         {{-- create room starts  --}}
         <div class="create_room">
             <div class="logos_room" >

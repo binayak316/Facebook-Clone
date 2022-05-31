@@ -275,14 +275,33 @@ logout prompt kholna ko lagi use vako ho right side ko
     font-size: 10px;
     font-weight: bold;
     text-align: center;
-    padding-top:40px;
-    
+    padding-top:40px; 
 }
-
-
-
-
-
+.storyReel{
+    
+    padding: 10px 0;
+    display: flex;
+}
+.create_my_story{
+    position: relative;
+    background-repeat:no-repeat ;
+    background-size: cover;
+    width: 120px;
+    height: 200px;
+    box-shadow:0px 5px 17px -7px rgba(0, 0, 0, 0.75) ;
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer; 
+}
+.Right_subsection{
+    display: flex;
+    width: 500px;
+}
+.second_right_subsection{
+    display: flex;
+    width: 100%;
+    overflow: hidden; 
+}
 
 .story{
     position: relative;
@@ -295,13 +314,16 @@ logout prompt kholna ko lagi use vako ho right side ko
     margin-right: 10px;
     cursor: pointer;
     transition: transform 100ms ease-in;
+   
 }
+
 .story:hover{
     transform: scale(1.07); 
 }
 .story_avatar{
     margin:10px;
 }
+
 .story h6{
     position: absolute;
     bottom: 5px;
@@ -310,11 +332,11 @@ logout prompt kholna ko lagi use vako ho right side ko
     font-size:small;
 
 }
-.storyReel{
-    
-    padding: 10px 0;
-    display: flex;
-}
+
+/* story part ends */
+
+
+
 .main-body{
     display: flex;
 }
