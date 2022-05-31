@@ -587,10 +587,12 @@ body{
 .like_share_comment{
     margin-bottom: -29px;
     margin-top: 10px;
+    display: flex;
 }
 
 .reacts{
     margin-left:10px;
+    flex-basis: 50%;
     
 }
 .reacts .img2{
@@ -603,6 +605,11 @@ body{
     margin-left:20px;
     margin-right:20px;
     margin-bottom:-10px;
+}
+.comment_share{
+    display: flex;
+    flex-basis: 50%;
+    justify-content:space-evenly;
 }
 
     
