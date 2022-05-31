@@ -14,7 +14,7 @@ class RegisterController extends Controller
     // display the login interface 
     public function index(){
         if(Auth::check()){
-            $posts = Post::all();
+            $posts = Post::latest()->get();
             return view('home',['posts'=>$posts]);
         }
         return view('login');        

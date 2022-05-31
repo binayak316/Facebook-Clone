@@ -256,6 +256,34 @@ logout prompt kholna ko lagi use vako ho right side ko
 /* sidebar ends */
 
 /* story begins */
+
+#creatingstory svg{
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: #2e81f4;
+    color: white;
+    padding: 5px;
+    margin-top: 122px;
+    margin-left: 44px;
+    margin-bottom: -19px;
+}
+#creatingstory p{
+    background-color: white;
+    height: 65px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius:10px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    padding-top:40px;
+    
+}
+
+
+
+
+
+
 .story{
     position: relative;
     background-repeat:no-repeat ;
@@ -566,10 +594,10 @@ body{
     
 }
 .reacts .img2{
-    margin-left:-10px;    
+    margin-left:-5px;    
 }
 .reacts .img3{
-    margin-left:-10px;  
+    margin-left:-5px;  
 }
 .post_hr{
     margin-left:20px;
