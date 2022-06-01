@@ -174,17 +174,19 @@
 
         <div class="storyReel">
             
-            <div id="creatingstory" class="create_my_story" style="background-image:url('images/peace.jpg');">
+            <div id="creatingstory" class="story_creator" style="background-image:url('images/profiles/{{ auth()->user()->Image}}');">
                 <svg fill="currentColor" viewBox="0 0 20 20" width="2em" height="2em" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 ljqsnud1 jnigpg78 odw8uiq3"><g fill-rule="evenodd" transform="translate(-446 -350)"><g fill-rule="nonzero"><path d="M95 201.5h13a1 1 0 1 0 0-2H95a1 1 0 1 0 0 2z" transform="translate(354.5 159.5)"></path><path d="M102.5 207v-13a1 1 0 1 0-2 0v13a1 1 0 1 0 2 0z" transform="translate(354.5 159.5)"></path></g></g></svg>  
                 <p>create story</p>                 
             </div>   
+
+
             
             
             <div class="Right_subsection">
 
-                <div class="second_right_subsection">
+                <div class="second_right_subsection" >
                             {{-- story starts --}}
-                        <div style="background-image: url('images/mardi.jpg')" class="story">
+                        <div style="background-image: url('images/profiles/{{ auth()->user()->Image}}')" class="story">
                             <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%;border:4px solid #166ada ;height:40px;width:40px;">
                             <h6>Bibek thapa</h6>
                         </div>
@@ -200,13 +202,93 @@
                             <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
                             <h6>Shyam Kumar</h6>
                         </div>
+                       
                         
-                        
-                        {{-- story ends --}}
+                        <div style="background-image: url('images/mardi.jpg')" class="story">
+                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
+                            <h6>Shyam Kumar</h6>
+                        </div>
+                        <div style="background-image: url('images/mardi.jpg')" class="story">
+                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
+                            <h6>Shyam Kumar</h6>
+                        </div>
+                        <div style="background-image: url('images/mardi.jpg')" class="story">
+                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
+                            <h6>Shyam Kumar</h6>
+                        </div>
+                        <div style="background-image: url('images/mardi.jpg')" class="story">
+                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
+                            <h6>Shyam Kumar</h6>
+                        </div>
+                        <div style="background-image: url('images/mardi.jpg')" class="story">
+                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
+                            <h6>Shyam Kumar</h6>
+                        </div>
+                        <div style="background-image: url('images/mardi.jpg')" class="story">
+                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
+                            <h6>Shyam Kumar</h6>
+                        </div>
+                        <div style="background-image: url('images/mardi.jpg')" class="story">
+                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
+                            <h6>Shyam Kumar</h6>
+                        </div>
+                        <div style="background-image: url('images/mardi.jpg')" class="story">
+                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
+                            <h6>Shyam Kumar</h6>
+                        </div>
+                        <div style="background-image: url('images/mardi.jpg')" class="story">
+                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
+                            <h6>Shyam Kumar</h6>
+                        </div>
+                        <div style="background-image: url('images/mardi.jpg')" class="story">
+                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
+                            <h6>Shyam Kumar</h6>
+                        </div>
+
+                        <div style="background-image: url('images/mardi.jpg')" class="story">
+                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
+                            <h6>Shyam Kumar</h6>
+                        </div>
+                        <div style="background-image: url('images/mardi.jpg')" class="story">
+                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
+                            <h6>Shyam Kumar</h6>
+                        </div>
+                        <div style="background-image: url('images/mardi.jpg')" class="story">
+                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
+                            <h6>Shyam Kumar</h6>
+                        </div>
+                        <div style="background-image: url('images/mardi.jpg')" class="story">
+                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
+                            <h6>Shyam Kumar</h6>
+                        </div>
+                        <div style="background-image: url('images/mardi.jpg')" class="story">
+                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
+                            <h6>Shyam Kumar</h6>
+                        </div>
+                        <div style="background-image: url('images/mardi.jpg')" class="story">
+                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
+                            <h6>Shyam Kumar</h6>
+                        </div>
+                        <div style="background-image: url('images/mardi.jpg')" class="story">
+                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
+                            <h6>Shyam Kumar</h6>
+                        </div>
+                        <div style="background-image: url('images/mardi.jpg')" class="story">
+                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
+                            <h6>Shyam Kumar</h6>
+                        </div>
+                        {{-- story ends --}}                       
                 </div>
-               
+
+                <div class="nav">
+                    <div class="next">
+                        <svg fill="currentColor" viewBox="0 0 20 20" width="2.5em" height="2.5em" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 py1f6qlh rgmg9uty b73ngqbp"><path d="M7.8 4.53 13.273 10 7.8 15.47a.75.75 0 0 0 1.061 1.06l6-6a.751.751 0 0 0 0-1.06l-6-6A.75.75 0 0 0 7.8 4.53z"></path></svg>
+                    </div>
+                    <div class="pre">
+                        <svg fill="currentColor" viewBox="0 0 20 20" width="2.5em" height="2.5em" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 py1f6qlh rgmg9uty b73ngqbp"><path d="M12.2 4.53 6.727 10l5.47 5.47a.75.75 0 0 1-1.061 1.06l-6-6a.751.751 0 0 1 0-1.06l6-6A.75.75 0 1 1 12.2 4.53z"></path></svg>
+                    </div>
+                </div>  
             </div>
-            
         </div> 
 
 
@@ -419,9 +501,7 @@
             </div> <br>
             <div class="contact">
                 <img src="images/17500.jpg" alt="" height="53" width="50" style="border:4px solid #166ada"><h5>आशिम थापा </h5>
-            </div> <br>
-
-           
+            </div> <br>          
        </div>
     </div>
 </div>
@@ -457,6 +537,8 @@
     }
     document.querySelector('#select_post_preview_image').addEventListener("change", previewImages);
 </script>
+
+<script src="/js/storySlider.js"></script>
 
     
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>

@@ -233,13 +233,14 @@ logout prompt kholna ko lagi use vako ho right side ko
     width: 25%;
     position: fixed;
     left:5px;
+    padding-left:10px;
     /* sidebar scroll properties ends */
 
 }
 .sidebarRow{
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
     padding-right: 77px;
     cursor: pointer;  
 }
@@ -277,12 +278,37 @@ logout prompt kholna ko lagi use vako ho right side ko
     text-align: center;
     padding-top:40px; 
 }
+#creatingstory:hover{
+    opacity: 0.8;
+}
 .storyReel{
     
     padding: 10px 0;
     display: flex;
+  
 }
-.create_my_story{
+.next svg{
+    border: 1px solid lightgray;
+    padding: 3px;
+    border-radius: 50%;
+    color: gray;
+    margin-top: 86px;
+    display: inline-block;
+    
+    position: absolute;
+    left: 622px;
+    background-color: white;
+}
+.pre svg{    border: 1px solid lightgray;
+    border-radius: 50%;
+    color: gray;
+    margin-top: 86px;
+    background-color: white;
+    position: absolute;
+    left: -148px;
+
+}
+.story_creator{
     position: relative;
     background-repeat:no-repeat ;
     background-size: cover;
@@ -293,45 +319,59 @@ logout prompt kholna ko lagi use vako ho right side ko
     margin-right: 10px;
     cursor: pointer; 
 }
-.Right_subsection{
-    display: flex;
-    width: 500px;
-}
-.second_right_subsection{
-    display: flex;
-    width: 100%;
-    overflow: hidden; 
-}
 
 .story{
     position: relative;
     background-repeat:no-repeat ;
     background-size: cover;
     width: 120px;
-    height: 200px;
+    min-width:120px;
+    height: 200px !important;
     box-shadow:0px 5px 17px -7px rgba(0, 0, 0, 0.75) ;
     border-radius: 10px;
     margin-right: 10px;
     cursor: pointer;
     transition: transform 100ms ease-in;
-   
+    
 }
-
 .story:hover{
     transform: scale(1.07); 
+    opacity: 0.8;
+    cursor: pointer;
+    
 }
 .story_avatar{
     margin:10px;
 }
-
 .story h6{
     position: absolute;
     bottom: 5px;
     color: white;
     left: 20px;
     font-size:small;
-
 }
+
+.Right_subsection{
+    display: flex;  
+    /* this is for next button on story  position is relative to the parent and absolute to the child*/
+    position: relative; 
+}
+
+.second_right_subsection{
+    display: flex;
+   
+    max-width: 640px;
+    overflow: hidden;
+    overflow-x: auto;
+    /* position:relative; */
+    
+}
+.second_right_subsection::-webkit-scrollbar{
+    width: 0px;
+}
+
+
+
 
 /* story part ends */
 
