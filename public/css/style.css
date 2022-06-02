@@ -294,18 +294,20 @@ logout prompt kholna ko lagi use vako ho right side ko
     color: gray;
     margin-top: 86px;
     display: inline-block;
-    
+    cursor: pointer;
     position: absolute;
     left: 622px;
     background-color: white;
 }
-.pre svg{    border: 1px solid lightgray;
+.pre svg{   
+    border: 1px solid lightgray;
     border-radius: 50%;
     color: gray;
     margin-top: 86px;
     background-color: white;
     position: absolute;
     left: -148px;
+    cursor: pointer;
 
 }
 .story_creator{
@@ -369,9 +371,76 @@ logout prompt kholna ko lagi use vako ho right side ko
 .second_right_subsection::-webkit-scrollbar{
     width: 0px;
 }
+/* create story modal style starts */
+#create_personal_story #modal_content{
+    top: 100px;
+    width: 700px;
+    left: -100px;
+    position: relative;
+}
 
+#create_personal_story .body img{
+    height: 100%;
+    border-radius: 5px;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+#create_personal_story .modals_footer{
+        
+        padding: 10px;
+        float: right;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+}
+#create_personal_story .main_body{
+    display: flex;
+}
 
+#create_personal_story #story_preview{
+    height: 200px;
+    border: 1px solid lightgray;
+    width: 120px;
+    border-radius: 10px;
+    margin: 10px;
+    overflow: hidden;
+    object-fit: cover;
+    background: linear-gradient(45deg, black, transparent);
+    margin-left: 18px;
+    position: relative;
+    
+}
+#create_personal_story #status_preview{
+    height: 200px;
+    border: 1px solid lightgray;
+    width: 120px;
+    border-radius: 10px;
+    margin: 10px;
+    overflow: hidden;
+    object-fit: cover;
+    background: linear-gradient(-111deg, black, transparent);
+    margin-left: 17px;
+    
+}
+#status_preview svg{
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    margin-left: 45px;
+    padding: 15px;
+    margin-top: 69px;
+}
+#status_preview p{
+    font-weight: bold;
+    font-size: 10px;
+    color: white;
+    align-items: center;
+    text-align: center;
+    
+}
 
+/* create story modal style ends */
 
 /* story part ends */
 

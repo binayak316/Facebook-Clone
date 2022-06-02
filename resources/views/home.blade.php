@@ -173,11 +173,11 @@
 
 
         <div class="storyReel">
-            
-            <div id="creatingstory" class="story_creator" style="background-image:url('images/profiles/{{ auth()->user()->Image}}');">
-                <svg fill="currentColor" viewBox="0 0 20 20" width="2em" height="2em" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 ljqsnud1 jnigpg78 odw8uiq3"><g fill-rule="evenodd" transform="translate(-446 -350)"><g fill-rule="nonzero"><path d="M95 201.5h13a1 1 0 1 0 0-2H95a1 1 0 1 0 0 2z" transform="translate(354.5 159.5)"></path><path d="M102.5 207v-13a1 1 0 1 0-2 0v13a1 1 0 1 0 2 0z" transform="translate(354.5 159.5)"></path></g></g></svg>  
-                <p>create story</p>                 
-            </div>   
+            <label id="creatingstory" class="story_creator"  data-bs-toggle="modal" data-bs-target="#create_personal_story" style="background-image:url('images/profiles/{{ auth()->user()->Image}}');">
+                {{-- this modal will be at last of the page --}}
+                <svg fill="currentColor"   data-bs-toggle="modal" data-bs-target="#create_personal_story"        viewBox="0 0 20 20" width="2em" height="2em" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 ljqsnud1 jnigpg78 odw8uiq3"><g fill-rule="evenodd" transform="translate(-446 -350)"><g fill-rule="nonzero"><path d="M95 201.5h13a1 1 0 1 0 0-2H95a1 1 0 1 0 0 2z" transform="translate(354.5 159.5)"></path><path d="M102.5 207v-13a1 1 0 1 0-2 0v13a1 1 0 1 0 2 0z" transform="translate(354.5 159.5)"></path></g></g></svg>  
+               <p>create story</p>           
+            </label>   
 
 
             
@@ -306,8 +306,6 @@
 
                 <div class="nav">
                     <div class="next" onclick="moveNext()">
-                        {{-- <button class="prev-btn" id="left"><</button>
-                        <button class="nxt-btn" id="right">></button> --}}
                         <svg  id="left" fill="currentColor" viewBox="0 0 20 20" width="2.5em" height="2.5em" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 py1f6qlh rgmg9uty b73ngqbp"><path d="M7.8 4.53 13.273 10 7.8 15.47a.75.75 0 0 0 1.061 1.06l6-6a.751.751 0 0 0 0-1.06l-6-6A.75.75 0 0 0 7.8 4.53z"></path></svg>
                     </div>
                     <div class="pre" onclick="movePrev()">
@@ -533,6 +531,42 @@
 </div>
 
 
+{{-- modal of the sotries starts --}}
+<div class="modal fade" id="create_personal_story" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" id="modal_content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Create Story</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="main_body">
+            <div class="body" id="story_preview">
+                {{-- <img src="images/p.jpg" alt="storyphoto"> --}}
+    
+            </div>
+            <div class="body" id="status_preview">
+                <svg fill="currentColor" viewBox="0 0 20 20" width="1em" height="1em" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 py1f6qlh rgmg9uty b73ngqbp"><path d="M7.8 4.53 13.273 10 7.8 15.47a.75.75 0 0 0 1.061 1.06l6-6a.751.751 0 0 0 0-1.06l-6-6A.75.75 0 0 0 7.8 4.53z"></path></svg>
+                <p>Create a text story</p>
+    
+            </div>
+        </div>
+        <div class="modals_footer">
+            {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">preview the photo</button> --}}
+            <label for="story" class="btn btn-info" style="color:white;">View Image</label>
+            <input type="file" id="story"  style="display: none;">
+
+
+            <button type="submit" class="btn btn-primary">Upload the photo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{{-- modal of the sotries ends --}}
+
+
+
+
+
 <script>
     function previewImages() {
     var preview = document.querySelector('#post_image_preview');
@@ -565,6 +599,8 @@
 </script>
 
 <script src="/js/storySlider.js"></script>
+
+<script src="/js/storypreview.js"></script>
 
     
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
