@@ -240,7 +240,7 @@ logout prompt kholna ko lagi use vako ho right side ko
 .sidebarRow{
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
     padding-right: 77px;
     cursor: pointer;  
 }
