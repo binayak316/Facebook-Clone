@@ -14,7 +14,6 @@
                 <span><i class="fa-solid fa-magnifying-glass"></i></span>
                 <input type="text" placeholder="Search Facebook">
             </div> 
-
     </div>
 
     <div class="header_middle">
@@ -186,121 +185,13 @@
 
                 <div class="second_right_subsection" id="box">
                             {{-- story starts --}}
-                        <div style="background-image: url('images/profiles/{{ auth()->user()->Image}}')" class="story" id="Div1">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%;border:4px solid #166ada ;height:40px;width:40px;">
-                            <h6>Bibek thapa</h6>
+                            @foreach($stories as $story)
+                        <div style="background-image: url('images/stories/{{$story->storyImg}}')" class="story" id="Div1">
+                            <img class="user_avatar story_avatar" src="images/profiles/{{$story->user->Image}}" alt="first story" style="border-radius: 50%;border:4px solid #166ada ;height:40px;width:40px;">
+                            {{-- <img class="user_avatar story_avatar" src="images/p.jpg" alt="first story" style="border-radius: 50%;border:4px solid #166ada ;height:40px;width:40px;"> --}}
+                            <h6>{{$story->user->fname}} {{$story->user->lname}}</h6>
                         </div>
-                        <div style="background-image: url('images/flag.jpg')" class="story" id="Div2">
-                            <img class="user_avatar story_avatar" src="images/p3.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;" >
-                            <h6>Bibek Thapa</h6>
-                        </div>
-                        <div style="background-image: url('images/peace.jpg')" class="story" id="Div3">
-                            <img class="user_avatar story_avatar" src="images/pp.jpg" alt="first story" style="border-radius: 50%;border:4px solid #166ada ;height:40px;width:40px;">
-                            <h6>Ram Thapa</h6>
-                        </div>
-                        <div style="background-image: url('images/mardi.jpg')" class="story" id="Div4">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
-                            <h6>Shyam Kumar</h6>
-                        </div>
-                       
-                        
-                        <div style="background-image: url('images/mardi.jpg')" class="story" id="Div5">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
-                            <h6>Shyam Kumar</h6>
-                        </div>
-                        <div style="background-image: url('images/mardi.jpg')" class="story" id="Div6">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
-                            <h6>Shyam Kumar</h6>
-                        </div>
-                        <div style="background-image: url('images/mardi.jpg')" class="story" id="Div7">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
-                            <h6>Shyam Kumar</h6>
-                        </div>
-                        <div style="background-image: url('images/mardi.jpg')" class="story" id="Div8">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
-                            <h6>Shyam Kumar</h6>
-                        </div>
-                        <div style="background-image: url('images/profiles/{{ auth()->user()->Image}}')" class="story" id="Div1">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%;border:4px solid #166ada ;height:40px;width:40px;">
-                            <h6>Bibek thapa</h6>
-                        </div>
-                        <div style="background-image: url('images/flag.jpg')" class="story" id="Div2">
-                            <img class="user_avatar story_avatar" src="images/p3.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;" >
-                            <h6>Bibek Thapa</h6>
-                        </div>
-                        <div style="background-image: url('images/mardi.jpg')" class="story" id="Div9">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
-                            <h6>Shyam Kumar</h6>
-                        </div>
-                        <div style="background-image: url('images/mardi.jpg')" class="story" id="Div10">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
-                            <h6>Shyam Kumar</h6>
-                        </div>
-                        <div style="background-image: url('images/mardi.jpg')" class="story" id="Div11">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
-                            <h6>Shyam Kumar</h6>
-                        </div>
-                        <div style="background-image: url('images/mardi.jpg')" class="story" id="Div12">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
-                            <h6>Shyam Kumar</h6>
-                        </div>
-                        <div style="background-image: url('images/mardi.jpg')" class="story" id="Div13">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
-                            <h6>Shyam Kumar</h6>
-                        </div>
-                        <div style="background-image: url('images/profiles/{{ auth()->user()->Image}}')" class="story" id="Div1">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%;border:4px solid #166ada ;height:40px;width:40px;">
-                            <h6>Bibek thapa</h6>
-                        </div>
-                        <div style="background-image: url('images/flag.jpg')" class="story" id="Div2">
-                            <img class="user_avatar story_avatar" src="images/p3.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;" >
-                            <h6>Bibek Thapa</h6>
-                        </div>
-                        <div style="background-image: url('images/mardi.jpg')" class="story" id="Div14">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
-                            <h6>Shyam Kumar</h6>
-                        </div>
-
-                        <div style="background-image: url('images/mardi.jpg')" class="story" id="Div15">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
-                            <h6>Shyam Kumar</h6>
-                        </div>
-                        <div style="background-image: url('images/mardi.jpg')" class="story" id="Div16">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
-                            <h6>Shyam Kumar</h6>
-                        </div>
-                        <div style="background-image: url('images/mardi.jpg')" class="story" id="Div15">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
-                            <h6>Shyam Kumar</h6>
-                        </div>
-                        <div style="background-image: url('images/mardi.jpg')" class="story" id="Div16">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
-                            <h6>Shyam Kumar</h6>
-                        </div>
-                        <div style="background-image: url('images/mardi.jpg')" class="story" id="Div17">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
-                            <h6>Shyam Kumar</h6>
-                        </div>
-                        <div style="background-image: url('images/mardi.jpg')" class="story" id="Div18">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
-                            <h6>Shyam Kumar</h6>
-                        </div>
-                        <div style="background-image: url('images/mardi.jpg')" class="story" id="Div19">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
-                            <h6>Shyam Kumar</h6>
-                        </div>
-                        <div style="background-image: url('images/mardi.jpg')" class="story"id="Div20">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
-                            <h6>Shyam Kumar</h6>
-                        </div>
-                        <div style="background-image: url('images/mardi.jpg')" class="story" id="Div21">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
-                            <h6>Shyam Kumar</h6>
-                        </div>
-                        <div style="background-image: url('images/mardi.jpg')" class="story" id="Div22">
-                            <img class="user_avatar story_avatar" src="images/p2.jpg" alt="first story" style="border-radius: 50%; height:40px;width:40px;">
-                            <h6>Shyam Kumar</h6>
-                        </div>
+                        @endforeach
                         {{-- story ends --}}                       
                 </div>
 
@@ -532,35 +423,40 @@
 
 
 {{-- modal of the sotries starts --}}
-<div class="modal fade" id="create_personal_story" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content" id="modal_content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Create Story</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="main_body">
-            <div class="body" id="story_preview">
-                {{-- <img src="images/p.jpg" alt="storyphoto"> --}}
-    
-            </div>
-            <div class="body" id="status_preview">
-                <svg fill="currentColor" viewBox="0 0 20 20" width="1em" height="1em" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 py1f6qlh rgmg9uty b73ngqbp"><path d="M7.8 4.53 13.273 10 7.8 15.47a.75.75 0 0 0 1.061 1.06l6-6a.751.751 0 0 0 0-1.06l-6-6A.75.75 0 0 0 7.8 4.53z"></path></svg>
-                <p>Create a text story</p>
-    
-            </div>
-        </div>
-        <div class="modals_footer">
-            {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">preview the photo</button> --}}
-            <label for="story" class="btn btn-info" style="color:white;">View Image</label>
-            <input type="file" id="story"  style="display: none;">
 
-
-            <button type="submit" class="btn btn-primary">Upload the photo</button>
+<form action="{{route('story')}}" method="POST" enctype="multipart/form-data">
+    @csrf
+    <div class="modal fade" id="create_personal_story" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content" id="modal_content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Create Story</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="main_body">
+                <div class="body" id="story_preview">
+                    {{-- <img src="images/p.jpg" alt="storyphoto"> --}}
+        
+                </div>
+                <div class="body" id="status_preview">
+                    <svg fill="currentColor" viewBox="0 0 20 20" width="1em" height="1em" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4 py1f6qlh rgmg9uty b73ngqbp"><path d="M7.8 4.53 13.273 10 7.8 15.47a.75.75 0 0 0 1.061 1.06l6-6a.751.751 0 0 0 0-1.06l-6-6A.75.75 0 0 0 7.8 4.53z"></path></svg>
+                    <p>Create a text story</p>
+        
+                </div>
+            </div>
+            <div class="modals_footer">
+                {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">preview the photo</button> --}}
+                <label for="story" class="btn btn-info" style="color:white;">View Image</label>
+                <input type="file" name="uploadTheStory" id="story"  style="display: none;">
+    
+    
+                <button type="submit" class="btn btn-primary">Upload the photo</button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+</form>
+
 {{-- modal of the sotries ends --}}
 
 

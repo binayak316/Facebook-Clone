@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Post;
+use App\Models\Story;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -15,7 +16,8 @@ class RegisterController extends Controller
     public function index(){
         if(Auth::check()){
             $posts = Post::latest()->get();
-            return view('home',['posts'=>$posts]);
+            $stories = Story::latest()->get();
+            return view('home',['posts'=>$posts],['stories'=>$stories]);
         }
         return view('login');        
     }

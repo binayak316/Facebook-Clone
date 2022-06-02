@@ -14,11 +14,12 @@ class Post extends Model
     // protected $fillable = [
     //     'body',
     // ];
-    // one to many inverse relationship with user model
 
+
+
+    // one to many inverse relationship with user model
     public function user(){
         return $this->belongsTO(User::class);
-
     }
 
 }
