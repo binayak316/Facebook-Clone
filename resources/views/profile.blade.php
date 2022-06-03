@@ -39,7 +39,7 @@
     
         <div class="header_right">
              <div class="header_info">
-                 <img class="user_avatar" src="images/profiles/{{ auth()->user()->Image}}" alt="profilepicture" <img src="images/pp.jpg" alt=""style="border-radius: 50%; height:45px;width:45px;padding:5px;">
+                 <img class="user_avatar" src="images/profiles/{{ auth()->user()->Image}}" alt="profilepicture" <img src="images/pp.jpg" alt=""style="border-radius: 50%; height:45px;width:45px;padding:5px;object-fit:cover;">
                  <h6 style="text-transform: capitalize;">{{auth()->user()->fname}} {{auth()->user()->lname}}</h6>
              </div>
              {{-- right sides icons --}}
@@ -69,7 +69,7 @@
     
                               <div class="main_div">
                                   <div class="div_for_image">
-                                    <img src="images/profiles/{{ auth()->user()->Image}}" alt="profile_photo">
+                                    <img src="images/profiles/{{ auth()->user()->Image}}" alt="profile_photo" style="object-fit: cover;">
                                   </div>
                                   <div class="div_for_name">
                                       <h6 style="text-transform: capitalize;">{{auth()->user()->fname}} {{auth()->user()->lname}}</h6>
