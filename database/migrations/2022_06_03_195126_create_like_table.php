@@ -13,17 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('fb_ko_post', function (Blueprint $table) {
+        Schema::create('like', function (Blueprint $table) {
             $table->id();
-            $table->string('body')->nullable();
-            // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            // $table->foreign('user_id')->references('id')->on('users') ;
-            $table->foreignId('user_id')->constrained('users');
-            $table->string('Img')->nullable();
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('post_id')->constrained('fb_ko_post')->onDelete('cascade');
+            $table->boolean('liked');
+            // $table->unique(['user_id','post_id']);
             $table->timestamps();
-            
         });
-    }
+    } 
 
     /**
      * Reverse the migrations.
@@ -32,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fb_ko_post');
+        Schema::dropIfExists('like');
     }
 };

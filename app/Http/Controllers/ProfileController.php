@@ -23,7 +23,7 @@ class ProfileController extends Controller
             $filename = time() . '.' . $image->getClientOriginalExtension();
             Image::make($image)->save(public_path('images/profiles/' . $filename));
             
-            $user = Auth::user();
+            $user = Auth::user();//this line checks if the user is authenticated or not
             $user->Image = $filename; //$user->Image vaneko chai user vanne table ko image vanne column ho 
             $user->save();
         }

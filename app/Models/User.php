@@ -8,6 +8,12 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
+use App\Models\Post;
+use App\Models\User;
+use App\Models\Like;
+
+
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -55,6 +61,12 @@ class User extends Authenticatable
     public function post(){
         return $this->hasMany(Post::class);
     }
+
+
+    public function like(){
+        return $this->hasMany(Like::class);
+    }
+
 
     
 }

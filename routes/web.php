@@ -5,10 +5,8 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController; 
 use App\Http\Controllers\StoryController; 
+use App\Http\Controllers\likeController; 
 use Illuminate\Support\Facades\Auth;
-
-
-
 
 
 
@@ -37,4 +35,7 @@ Route::post('/',[PostController::class, 'create'])->middleware('auth')->name('Po
 Route::post('/story',[StoryController::class,'mystory'])->middleware('auth')->name('story');
 
 
-
+// post route for like the posts
+// Route::post('/like-post/{post}',[likeController::class,'likePost'])->middleware('auth')->name('postLike');
+Route::post('/likePost',[likeController::class,'likePost'])->middleware('auth')->name('likePost');
+   

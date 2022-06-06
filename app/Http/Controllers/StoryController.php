@@ -19,7 +19,7 @@ class StoryController extends Controller
             $stories->storyImg = $filename;
            
         }
-        $user->Post()->save($stories);
+        $user->Post()->save($stories);//post() vanne function chai user.php ko Hasmany relation lako post aako ho post() ho function
         return redirect(route('authCheck'))->with('successMessage',"created a story");
 
     }
