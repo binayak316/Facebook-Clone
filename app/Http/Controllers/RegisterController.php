@@ -17,7 +17,9 @@ class RegisterController extends Controller
         if(Auth::check()){
             $posts = Post::latest()->get();
             $stories = Story::latest()->get();
+            // $contacts = User::all();
             return view('home',['posts'=>$posts],['stories'=>$stories]);
+            // return view('home',['posts'=>$posts],['stories'=>$stories],['contacts'=>$contacts]);
         }
         return view('login');        
     }

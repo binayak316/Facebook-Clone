@@ -154,7 +154,7 @@
             <img class="hu5pjgll bixrwtb6" src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/he-BkogidIc.png" style="height:36px;width:36px" alt="">            <h4>Memories</h4>
         </div>
         <div class="sidebarRow">
-            <svg fill="currentColor" viewBox="0 0 16 16" width="1em" height="1em" class="  a8c37x1j ms05siws l3qrxjdp b7h9ocf4 rs22bh7c jnigpg78 odw8uiq3"><g fill-rule="evenodd" transform="translate(-448 -544)"><path fill-rule="nonzero" d="M452.707 549.293a1 1 0 0 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L456 552.586l-3.293-3.293z"></path></g></svg>
+            <svg fill="currentColor" viewBox="0 0 16 16" width="2em" height="2em" class="  a8c37x1j ms05siws l3qrxjdp b7h9ocf4 rs22bh7c jnigpg78 odw8uiq3"><g fill-rule="evenodd" transform="translate(-448 -544)"><path fill-rule="nonzero" d="M452.707 549.293a1 1 0 0 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L456 552.586l-3.293-3.293z"></path></g></svg>
             <h4>See more</h4>
         </div>
     </div>
@@ -358,9 +358,10 @@
                         @csrf
                         <input type="number" class="likeOn" id="likeOn" style="display: none;" name="likeOn" value="{{$post->id}}">
                         <button class="likeBtn" id="likeBtn" type="submit" >
-                            <span><i class="fa-regular fa-thumbs-up fa-xl "> </i></span>
+                            {{-- <span><i class="fa-regular fa-thumbs-up fa-xl " style="color:{{Auth::user()->like()->where('post_id',$post->id)->count() > 0 ? 'red': '' }}"> </i></span> --}}
+                            <span><i class="fa fa-thumbs-up " style="font-size:24px;color:{{Auth::user()->like()->where('post_id',$post->id)->count() > 0 ? 'blue': '' }}"> </i></span>
                             <span id="totalLikes"></span>
-                            Like
+                           <span style="color:gray;">Like</span>
                         </button>
 
 
@@ -394,9 +395,11 @@
              
         </div>
         <div class="contacts">
+            {{-- @foreach($contacts as $contact)
             <div class="contact">
-              <img src="images/17500.jpg" alt="" height="53" width="50" style="border:4px solid #166ada"><h5>आबेश थापा </h5>
+              <img src="images/17500.jpg" alt="" height="53" width="50" style="border:4px solid #166ada"><h5>{{$contact->user->fname}} {{$contact->user->lname}}</h5>
             </div> <br>
+            @endforeach --}}
             <div class="contact">
                 <img src="images/17500.jpg" alt="" height="53" width="50" style="border:4px solid #166ada"><h5>पशुपति थापा </h5>
             </div> <br>
@@ -417,7 +420,13 @@
             </div> <br>
             <div class="contact">
                 <img src="images/17500.jpg" alt="" height="53" width="50" style="border:4px solid #166ada"><h5>आशिम थापा </h5>
-            </div> <br>          
+            </div> <br> 
+            <div class="contact">
+                <span><svg fill="currentColor" viewBox="0 0 16 16" width="3em" height="3em" clacdss="  a8c37x1j ms05siws l3qrxjdp b7h9ocf4 rs22bh7c jnigpg78 odw8uiq3"><g fill-rule="evenodd" transform="translate(-448 -544)"><path fill-rule="nonzero" d="M452.707 549.293a1 1 0 0 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L456 552.586l-3.293-3.293z"></path></g></svg> &nbsp; See More </span>
+            </div> <br> 
+
+             <hr style="margin-top:-8px;">  
+
        </div>
     </div>
 </div>
