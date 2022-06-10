@@ -29,30 +29,39 @@ class likeController extends Controller
         // dd($request->all());
         $user = Auth::user();
         $post_id = $request->likeOn;
-        $post = Post::where('id',$request->likeOn)->first();
         
-        $isLikedAlready = like::where('user_id',$user->id)->where('post_id',$post_id)->where('liked',true)->first();
-        // dd($post->likes->count());
+        $post = Post::where('id',$request->likeOn)->first();
+        // dd($post);
+        
+        $isLikedAlready = like::where('user_id',$user->id)->where('post_id',$post->id)->where('liked',true)->first();
+        // dd($isLikedAlready);
         if(!$isLikedAlready || $user->id !== $isLikedAlready->user_id){
-            like::create([
+           $data =  like::create([
                 'user_id'=> $user->id,
                 'post_id'=>$post_id,
                 'liked'=>true,
 
             ]);
+            $message = 'liked';
             // return response(['message'=>"liked","likes"=>$post->likes->count()]);
             // return redirect()->back();
-            return back();
+            // return back();
+           
         
         }
         else{
             $isLikedAlready->delete();
+            $message = 'unliked';
             // return response(["message"=>"unliked","likes"=>$post->likes->count()]);
             // return redirect()->back();
-            return back();
+            // return back();
+            // return response()
 
 
         }
+
+        $totallikes = like::where('post_id', $post->id)->count();
+        return response(["message"=>$message,"likes"=>$totallikes]);
     }
 
    

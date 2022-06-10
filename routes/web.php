@@ -37,5 +37,5 @@ Route::post('/story',[StoryController::class,'mystory'])->middleware('auth')->na
 
 // post route for like the posts
 // Route::post('/like-post/{post}',[likeController::class,'likePost'])->middleware('auth')->name('postLike');
-Route::post('/likePost',[likeController::class,'likePost'])->middleware('auth')->name('likePost');
+Route::get('/likePost',[likeController::class,'likePost'])->middleware('auth')->name('likePost');
    

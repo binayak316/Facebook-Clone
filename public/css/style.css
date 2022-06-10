@@ -759,6 +759,7 @@ body{
     width: 25%;
     right: -5%;
     position: fixed;
+    cursor: pointer;
     
     /* for scroll properties ends */
 }
